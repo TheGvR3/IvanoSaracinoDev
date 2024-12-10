@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Intro - [Tuo Nome]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap'>
+    <style>
+        html, body {
+            height: 100%;
+            cursor: pointer;
+        }
+        
+        body {
+            display: grid;
+            place-items: center;
+            font: 600 100%/1 "Josefin Sans", sans-serif;
+            background-color: #0e0e0e;
+        }
+        
+        .heading {
+            font-size: clamp(5rem, 16vw, 16.5rem);
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            transform-origin: 60% 60%;
+            padding-top: 0.5em;
+            font-size: 100px;
+        }
+        
+        .heading > div {
+            transform-origin: 50% 100%;
+            overflow: hidden;
+        }
+
+        .enter-site {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .enter-site.visible {
+            opacity: 0.7;
+        }
+
+        .enter-site:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading" aria-label="[Tuo Nome]">
+        Ivano Saracino 
+    </h1>
+
+    <a href="home.html" class="enter-site">Entra nel sito</a>
+
+    <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+    <script src='https://assets.codepen.io/16327/SplitText3.min.js'></script>
+    <script>
+        const heading = document.querySelector(".heading");
+        const enterSite = document.querySelector(".enter-site");
+        const headingSplitText = new SplitText(heading, { type: "chars" });
+        const headingChars = headingSplitText.chars;
+
+        gsap.from(headingChars, {
+            filter: "blur(0.15em)",
+            stagger: {
+                from: "left",
+                each: .1
+            },
+            duration: i => 1.25 + i * .75,
+            ease: "power2.inOut",
+            onComplete: () => {
+                enterSite.classList.add('visible');
+            }
+        });
+
+        gsap.from(headingChars, {
+            xPercent: i => (i + 1) * 20,
+            opacity: 0,
+            stagger: {
+                from: "left",
+                each: .1
+            },
+            duration: i => 1 + i * .85,
+            ease: "power2.out"
+        }, "<");
+
+        // Aggiunge il click su tutto il body per navigare alla home
+        document.body.addEventListener('click', () => {
+            window.location.href = 'home.html';
+        });
+    </script>
+</body>
+</html>

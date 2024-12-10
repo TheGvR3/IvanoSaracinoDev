@@ -1,0 +1,60 @@
+/* Media Queries */
+@media (min-width: 768px) {
+    /* Typography */
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Navigation */
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0 1rem;
+    }
+
+    /* Grid Layouts */
+    .progetti-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .contact-content {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Carousel */
+    .carousel-item img {
+        height: 350px;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Grid Layouts */
+    .progetti-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Carousel */
+    .carousel-item img {
+        height: 400px;
+    }
+} 

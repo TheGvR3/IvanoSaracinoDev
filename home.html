@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio di [Tuo Nome], sviluppatore web specializzato in HTML, CSS, JavaScript e PHP. Scopri i miei progetti e le mie competenze.">
+    <meta name="keywords" content="portfolio, sviluppatore web, HTML, CSS, JavaScript, PHP, progetti">
+    <title>[Tuo Nome] - Portfolio Sviluppatore Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo [Tuo Nome]">
+            </div>
+            <h1>Ivano Saracino</h1>
+            <p>Sviluppatore Web Full Stack</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <button class="hamburger">☰</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="progetti.html">Progetti</a></li>
+                <li><a href="chi-sono.html">Chi Sono</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/tuo-profilo" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/tuo-username" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/tuo-username" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/tuo-username" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/tuo-profilo" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.youtube.com/channel/tuo-canale" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://stackoverflow.com/users/tuo-id" target="_blank" title="Stack Overflow"><i class="fab fa-stack-overflow"></i></a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section id="home">
+            <h2 class="section-title">Benvenuto nel mio Portfolio</h2>
+            <p>Qui troverai una selezione dei miei migliori progetti e potrai conoscermi meglio. Esplora le varie sezioni per scoprire le mie competenze e il mio lavoro.</p>
+        </section>
+
+        <section id="progetti-carousel">
+            <h3>I Miei Progetti in Evidenza</h3>
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <img src="https://picsum.photos/800/400?random=1" alt="Progetto 1">
+                    <div class="carousel-caption">
+                        <h4>Progetto 1</h4>
+                        <p>Breve descrizione del progetto 1</p>
+                        <a href="progetti.html#progetto1" class="btn">Scopri di più</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/800/400?random=2" alt="Progetto 2">
+                    <div class="carousel-caption">
+                        <h4>Progetto 2</h4>
+                        <p>Breve descrizione del progetto 2</p>
+                        <a href="progetti.html#progetto2" class="btn">Scopri di più</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/800/400?random=3" alt="Progetto 3">
+                    <div class="carousel-caption">
+                        <h4>Progetto 3</h4>
+                        <p>Breve descrizione del progetto 3</p>
+                        <a href="progetti.html#progetto3" class="btn">Scopri di più</a>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-control prev">&lt;</button>
+                    <button class="carousel-control next">&gt;</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="competenze">
+            <h3>Le Mie Competenze</h3>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-html5"></i>
+                    <h4>HTML5</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-css3-alt"></i>
+                    <h4>CSS3</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js"></i>
+                    <h4>JavaScript</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-php"></i>
+                    <h4>PHP</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-java"></i>
+                    <h4>Java</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-java"></i>
+                    <h4>Java EE</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-leaf"></i>
+                    <h4>Spring Boot</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-wordpress"></i>
+                    <h4>WordPress</h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonianze">
+            <h3>Cosa Dicono di Me</h3>
+            <div class="testimonial">
+                <blockquote>
+                    "Un sviluppatore web eccezionale, con una grande attenzione ai dettagli e una capacità unica di trasformare le idee in realtà."
+                </blockquote>
+                <cite>- Cliente Soddisfatto</cite>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Chi sono</h3>
+                    <p>Sono uno sviluppatore web appassionato, specializzato in HTML, CSS, JavaScript e PHP.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Link rapidi</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="progetti.html">Progetti</a></li>
+                        <li><a href="chi-sono.html">Chi Sono</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contattami</h3>
+                    <p>Email: tuo@email.com</p>
+                    <p>Telefono: +39 123 456 7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 [Tuo Nome]. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/carousel.js"></script>
+</body>
+</html> 

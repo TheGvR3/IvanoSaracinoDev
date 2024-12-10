@@ -1,0 +1,24 @@
+/* Projects Grid */
+.progetti-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.progetto {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.progetto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.progetto-content {
+    padding: 1rem;
+} 
