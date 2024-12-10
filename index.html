@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <title>Intro - [Tuo Nome]</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap'>
     <style>
-        html, body {
+        html,
+        body {
             height: 100%;
             cursor: pointer;
         }
-        
+
         body {
             display: grid;
             place-items: center;
             font: 600 100%/1 "Josefin Sans", sans-serif;
             background-color: #0e0e0e;
         }
-        
+
         .heading {
             font-size: clamp(5rem, 16vw, 16.5rem);
             color: #fff;
@@ -27,8 +29,8 @@
             padding-top: 0.5em;
             font-size: 100px;
         }
-        
-        .heading > div {
+
+        .heading>div {
             transform-origin: 50% 100%;
             overflow: hidden;
         }
@@ -54,12 +56,13 @@
         }
     </style>
 </head>
+
 <body>
     <h1 class="heading" aria-label="[Tuo Nome]">
-        Ivano Saracino 
+        Ivano Saracino
     </h1>
 
-    <a href="home.html" class="enter-site">Entra nel sito</a>
+    <a href="#" class="enter-site">Entra nel sito</a>
 
     <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
     <script src='https://assets.codepen.io/16327/SplitText3.min.js'></script>
@@ -93,10 +96,14 @@
             ease: "power2.out"
         }, "<");
 
+        
+        const DIR_ = '/GvR3'; 
         // Aggiunge il click su tutto il body per navigare alla home
         document.body.addEventListener('click', () => {
-            window.location.href = 'home.html';
+            window.location.href = `${DIR_}/pages/home.html`; // Usa DIR_ come prefisso
         });
+
     </script>
 </body>
+
 </html>
