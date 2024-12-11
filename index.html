@@ -10,14 +10,44 @@
         html,
         body {
             height: 100%;
+            margin: 0;
+            width: 100%;
+            overflow: hidden;
+        }
+
+
+        html {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font: 600 100%/1 "Josefin Sans", sans-serif;
+            background-color: black;
+            position: relative;
+            /* For positioning the pseudo-element */
             cursor: pointer;
         }
 
-        body {
-            display: grid;
-            place-items: center;
-            font: 600 100%/1 "Josefin Sans", sans-serif;
-            background-color: #0e0e0e;
+
+
+        html::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("images/background.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* Ensures the image covers the whole area */
+            background-position: center;
+            opacity: 0.05;
+            /* Adjust the transparency of the image */
+            z-index: 0;
+            /* Ensures the image stays behind the content */
+            pointer-events: none;
+            /*allow clicks through */
         }
 
         .heading {
@@ -26,18 +56,36 @@
             text-align: center;
             text-transform: uppercase;
             transform-origin: 60% 60%;
-            padding-top: 0.5em;
+            padding-top: 7.7em;
             font-size: 100px;
+            margin-bottom: -45px;
+            width: 100%;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .heading>div {
             transform-origin: 50% 100%;
             overflow: hidden;
+            position: relative;
+        }
+
+        
+        .subtitle {
+            font-size: 2rem;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            opacity: 0;
+            margin-top: 30px;
+            line-height: 0.9;
+            padding-bottom: 20px;
         }
 
         .enter-site {
             position: fixed;
-            bottom: 2rem;
+            bottom: 10rem;
             left: 50%;
             transform: translateX(-50%);
             color: #fff;
@@ -54,6 +102,15 @@
         .enter-site:hover {
             opacity: 1;
         }
+
+
+        /* Media query for larger screens (desktop) */
+        @media (min-width: 1024px) {
+            .heading {
+                padding-top: 3.7em;
+                /* Padding for desktop and large tablets */
+            }
+        }
     </style>
 </head>
 
@@ -61,6 +118,10 @@
     <h1 class="heading" aria-label="[Tuo Nome]">
         Ivano Saracino
     </h1>
+
+    <h2 class="subtitle">
+        Full Stack Developer
+    </h2>
 
     <a href="#" class="enter-site">Entra nel sito</a>
 
@@ -76,28 +137,40 @@
             filter: "blur(0.15em)",
             stagger: {
                 from: "left",
-                each: .1
+                each: .08
             },
-            duration: i => 1.25 + i * .75,
-            ease: "power2.inOut",
-            onComplete: () => {
-                enterSite.classList.add('visible');
-            }
+            duration: i => 1 + i * .5,
+            ease: "power2.inOut"
         });
-
         gsap.from(headingChars, {
             xPercent: i => (i + 1) * 20,
             opacity: 0,
             stagger: {
                 from: "left",
-                each: .1
+                each: .08
             },
-            duration: i => 1 + i * .85,
-            ease: "power2.out"
+            duration: i => Math.min(0.8 + i * .5, 2.2),
+            ease: "power2.out",
+            onComplete: () => {
+                const subtitle = document.querySelector(".subtitle");
+                gsap.to(subtitle, {
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power2.out",
+                    onComplete: () => {
+                        enterSite.classList.add('visible');
+                    }
+                });
+
+                gsap.from(subtitle, {
+                    filter: "blur(0.15em)",
+                    duration: 1.5,
+                    ease: "power2.inOut"
+                });
+            }
         }, "<");
 
-        
-        const DIR_ = '/GvR3'; 
+        const DIR_ = '/GvR3';
         // Aggiunge il click su tutto il body per navigare alla home
         document.body.addEventListener('click', () => {
             window.location.href = `${DIR_}/pages/home.html`; // Usa DIR_ come prefisso
