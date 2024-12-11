@@ -15,7 +15,6 @@
             overflow: hidden;
         }
 
-
         html {
             display: flex;
             flex-direction: column;
@@ -24,11 +23,8 @@
             font: 600 100%/1 "Josefin Sans", sans-serif;
             background-color: black;
             position: relative;
-            /* For positioning the pseudo-element */
             cursor: pointer;
         }
-
-
 
         html::before {
             content: "";
@@ -40,14 +36,10 @@
             background-image: url("images/background.png");
             background-repeat: no-repeat;
             background-size: cover;
-            /* Ensures the image covers the whole area */
             background-position: center;
             opacity: 0.05;
-            /* Adjust the transparency of the image */
             z-index: 0;
-            /* Ensures the image stays behind the content */
             pointer-events: none;
-            /*allow clicks through */
         }
 
         .heading {
@@ -55,32 +47,28 @@
             color: #fff;
             text-align: center;
             text-transform: uppercase;
-            transform-origin: 60% 60%;
             padding-top: 7.7em;
             font-size: 100px;
             margin-bottom: -45px;
             width: 100%;
             position: relative;
-            left: 50%;
-            transform: translateX(-50%);
+            opacity: 0;
+            filter: blur(0.15em);
+            animation: titleReveal 2s ease-out forwards;
+            transform-origin: center;
         }
 
-        .heading>div {
-            transform-origin: 50% 100%;
-            overflow: hidden;
-            position: relative;
-        }
-
-        
         .subtitle {
             font-size: 2rem;
             color: #fff;
             text-align: center;
             text-transform: uppercase;
-            opacity: 0;
-            margin-top: 30px;
+            margin-top: 50px;
             line-height: 0.9;
             padding-bottom: 20px;
+            opacity: 0;
+            filter: blur(0.15em);
+            animation: fadeInBlur 1.5s ease-out 1.5s forwards;
         }
 
         .enter-site {
@@ -92,23 +80,58 @@
             text-decoration: none;
             font-size: 1.2rem;
             opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .enter-site.visible {
-            opacity: 0.7;
+            animation: fadeIn 1s ease-out 3s forwards;
+            transition: opacity 0.3s ease;
         }
 
         .enter-site:hover {
-            opacity: 1;
+            opacity: 1 !important;
         }
 
+        @keyframes titleReveal {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.95);
+                filter: blur(0.15em);
+                letter-spacing: 20px;
+            }
+            50% {
+                opacity: 0.7;
+                transform: translateY(-10px) scale(1.02);
+                filter: blur(0.1em);
+                letter-spacing: 5px;
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+                letter-spacing: normal;
+            }
+        }
 
-        /* Media query for larger screens (desktop) */
+        @keyframes fadeInBlur {
+            0% {
+                opacity: 0;
+                filter: blur(0.15em);
+            }
+            100% {
+                opacity: 1;
+                filter: blur(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0.7;
+            }
+        }
+
         @media (min-width: 1024px) {
             .heading {
                 padding-top: 3.7em;
-                /* Padding for desktop and large tablets */
             }
         }
     </style>
@@ -125,57 +148,11 @@
 
     <a href="#" class="enter-site">Entra nel sito</a>
 
-    <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
-    <script src='https://assets.codepen.io/16327/SplitText3.min.js'></script>
     <script>
-        const heading = document.querySelector(".heading");
-        const enterSite = document.querySelector(".enter-site");
-        const headingSplitText = new SplitText(heading, { type: "chars" });
-        const headingChars = headingSplitText.chars;
-
-        gsap.from(headingChars, {
-            filter: "blur(0.15em)",
-            stagger: {
-                from: "left",
-                each: .08
-            },
-            duration: i => 1 + i * .5,
-            ease: "power2.inOut"
-        });
-        gsap.from(headingChars, {
-            xPercent: i => (i + 1) * 20,
-            opacity: 0,
-            stagger: {
-                from: "left",
-                each: .08
-            },
-            duration: i => Math.min(0.8 + i * .5, 2.2),
-            ease: "power2.out",
-            onComplete: () => {
-                const subtitle = document.querySelector(".subtitle");
-                gsap.to(subtitle, {
-                    opacity: 1,
-                    duration: 1,
-                    ease: "power2.out",
-                    onComplete: () => {
-                        enterSite.classList.add('visible');
-                    }
-                });
-
-                gsap.from(subtitle, {
-                    filter: "blur(0.15em)",
-                    duration: 1.5,
-                    ease: "power2.inOut"
-                });
-            }
-        }, "<");
-
         const DIR_ = '/GvR3';
-        // Aggiunge il click su tutto il body per navigare alla home
         document.body.addEventListener('click', () => {
-            window.location.href = `${DIR_}/pages/home.html`; // Usa DIR_ come prefisso
+            window.location.href = `${DIR_}/pages/home.html`;
         });
-
     </script>
 </body>
 
