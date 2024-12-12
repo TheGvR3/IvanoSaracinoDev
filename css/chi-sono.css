@@ -176,7 +176,7 @@
     animation-delay: 0.2s;
 }
 
-/* Tablet Breakpoint */
+/* Media Queries */
 @media (min-width: 768px) {
     #chi-sono {
         padding: 1.5rem 0;
@@ -203,7 +203,6 @@
     }
 }
 
-/* Desktop Breakpoint */
 @media (min-width: 1024px) {
     #chi-sono {
         padding: 2rem 0;

@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
 
@@ -29,33 +28,44 @@
         <section id="progetti-carousel">
             <h3>I Miei Progetti in Evidenza</h3>
             <div class="carousel">
-                <div class="carousel-item active">
-                    <img src="https://picsum.photos/800/400?random=1" alt="Progetto 1">
-                    <div class="carousel-caption">
-                        <h4>Progetto 1</h4>
-                        <p>Breve descrizione del progetto 1</p>
-                        <a href="progetti.html#progetto1" class="btn">Scopri di più</a>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-index="0">
+                        <img src="https://picsum.photos/800/400?random=1" alt="Progetto 1">
+                        <div class="carousel-caption">
+                            <h4>Progetto 1</h4>
+                            <p>Breve descrizione del progetto 1</p>
+                            <a href="progetti.html#progetto1" class="btn">Scopri di più</a>
+                        </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://picsum.photos/800/400?random=2" alt="Progetto 2">
-                    <div class="carousel-caption">
-                        <h4>Progetto 2</h4>
-                        <p>Breve descrizione del progetto 2</p>
-                        <a href="progetti.html#progetto2" class="btn">Scopri di più</a>
+                    <div class="carousel-item" data-index="1">
+                        <img src="https://picsum.photos/800/400?random=2" alt="Progetto 2">
+                        <div class="carousel-caption">
+                            <h4>Progetto 2</h4>
+                            <p>Breve descrizione del progetto 2</p>
+                            <a href="progetti.html#progetto2" class="btn">Scopri di più</a>
+                        </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://picsum.photos/800/400?random=3" alt="Progetto 3">
-                    <div class="carousel-caption">
-                        <h4>Progetto 3</h4>
-                        <p>Breve descrizione del progetto 3</p>
-                        <a href="progetti.html#progetto3" class="btn">Scopri di più</a>
+                    <div class="carousel-item" data-index="2">
+                        <img src="https://picsum.photos/800/400?random=3" alt="Progetto 3">
+                        <div class="carousel-caption">
+                            <h4>Progetto 3</h4>
+                            <p>Breve descrizione del progetto 3</p>
+                            <a href="progetti.html#progetto3" class="btn">Scopri di più</a>
+                        </div>
                     </div>
                 </div>
                 <div class="carousel-controls">
-                    <button class="carousel-control prev">&lt;</button>
-                    <button class="carousel-control next">&gt;</button>
+                    <button class="carousel-control prev" aria-label="Precedente">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-indicators">
+                        <button class="indicator active" data-index="0" aria-label="Slide 1"></button>
+                        <button class="indicator" data-index="1" aria-label="Slide 2"></button>
+                        <button class="indicator" data-index="2" aria-label="Slide 3"></button>
+                    </div>
+                    <button class="carousel-control next" aria-label="Successivo">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </section>
@@ -117,6 +127,7 @@
     </footer>
 
     <script src="../js/componetsLoader.js"></script>
+    <script src="../js/carousel.js"></script>
     <script src="../js/script.js"></script>
 </body>
 </html> 
