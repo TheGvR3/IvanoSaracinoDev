@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap'>
     <style>
+        /* ====================================
+           1. LAYOUT DI BASE
+        ==================================== */
         html,
         body {
             height: 100%;
@@ -26,6 +29,9 @@
             cursor: pointer;
         }
 
+        /* ====================================
+           2. SFONDO CON OVERLAY
+        ==================================== */
         html::before {
             content: "";
             position: absolute;
@@ -37,11 +43,14 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            opacity: 0.1;
+            opacity: 0.15;
             z-index: 0;
             pointer-events: none;
         }
 
+        /* ====================================
+           3. TITOLO PRINCIPALE
+        ==================================== */
         .heading {
             font-size: clamp(5rem, 16vw, 16.5rem);
             color: #fff;
@@ -58,6 +67,9 @@
             transform-origin: center;
         }
 
+        /* ====================================
+           4. SOTTOTITOLO
+        ==================================== */
         .subtitle {
             font-size: 2rem;
             color: #fff;
@@ -71,6 +83,9 @@
             animation: fadeInBlur 1.5s ease-out 1.5s forwards;
         }
 
+        /* ====================================
+           5. PULSANTE INGRESSO
+        ==================================== */
         .enter-site {
             position: fixed;
             bottom: 10rem;
@@ -88,6 +103,9 @@
             opacity: 1 !important;
         }
 
+        /* ====================================
+           6. ANIMAZIONI
+        ==================================== */
         @keyframes titleReveal {
             0% {
                 opacity: 0;
@@ -133,6 +151,9 @@
             }
         }
 
+        /* ====================================
+           7. MEDIA QUERIES
+        ==================================== */
         @media (min-width: 1024px) {
             .heading {
                 padding-top: 3.7em;

@@ -1,4 +1,6 @@
-/* Base styles (Mobile First) */
+/* ====================================
+   1. LAYOUT PRINCIPALE
+==================================== */
 #contatti {
     padding: 1rem 0;
 }
@@ -9,7 +11,9 @@
     margin-top: 1.5rem;
 }
 
-/* Form Styles */
+/* ====================================
+   2. FORM DI CONTATTO
+==================================== */
 form {
     background-color: var(--dark-accent);
     padding: 1.5rem;
@@ -18,6 +22,7 @@ form {
     order: 2; /* Il form appare dopo le info di contatto su mobile */
 }
 
+/* Campi input e textarea */
 form input,
 form textarea {
     width: 100%;
@@ -36,6 +41,7 @@ form textarea {
     resize: vertical;
 }
 
+/* Stati focus dei campi */
 form input:focus,
 form textarea:focus {
     outline: none;
@@ -43,11 +49,13 @@ form textarea:focus {
     background-color: var(--secondary-color);
 }
 
+/* Placeholder */
 form input::placeholder,
 form textarea::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }
 
+/* Pulsante invio */
 form button {
     width: 100%;
     padding: 0.8rem;
@@ -67,7 +75,9 @@ form button:hover {
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
 
-/* Contact Info */
+/* ====================================
+   3. INFORMAZIONI DI CONTATTO
+==================================== */
 .contact-info {
     background-color: var(--dark-accent);
     padding: 1.5rem;
@@ -76,12 +86,14 @@ form button:hover {
     order: 1; /* Le info di contatto appaiono prima del form su mobile */
 }
 
+/* Titolo sezione */
 .contact-info h3 {
     color: var(--primary-color);
     margin-bottom: 1.2rem;
     font-size: 1.3rem;
 }
 
+/* Paragrafi info */
 .contact-info p {
     margin-bottom: 1rem;
     display: flex;
@@ -95,6 +107,7 @@ form button:hover {
     margin-bottom: 0;
 }
 
+/* Link nelle info */
 .contact-info a {
     color: var(--primary-color);
     text-decoration: none;
@@ -106,6 +119,7 @@ form button:hover {
     text-decoration: underline;
 }
 
+/* Icone nelle info */
 .contact-info i {
     color: var(--primary-color);
     width: 20px;
@@ -113,7 +127,9 @@ form button:hover {
     font-size: 1.1rem;
 }
 
-/* Map Section */
+/* ====================================
+   4. SEZIONE MAPPA
+==================================== */
 #mappa {
     margin-top: 2rem;
 }
@@ -134,7 +150,9 @@ form button:hover {
     height: 300px;
 }
 
-/* Animations */
+/* ====================================
+   5. ANIMAZIONI
+==================================== */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -154,7 +172,10 @@ form, .contact-info {
     animation-delay: 0.2s;
 }
 
-/* Tablet Breakpoint */
+/* ====================================
+   6. MEDIA QUERIES
+==================================== */
+/* Tablet (768px e superiori) */
 @media (min-width: 768px) {
     #contatti {
         padding: 1.5rem 0;
@@ -188,7 +209,7 @@ form, .contact-info {
     }
 }
 
-/* Desktop Breakpoint */
+/* Desktop (1024px e superiori) */
 @media (min-width: 1024px) {
     #contatti {
         padding: 2rem 0;
@@ -200,11 +221,11 @@ form, .contact-info {
     }
 
     form {
-        order: 1;
+        order: 1; /* Form a sinistra su desktop */
     }
 
     .contact-info {
-        order: 2;
+        order: 2; /* Info a destra su desktop */
     }
 
     #google-map iframe {

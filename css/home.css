@@ -1,163 +1,13 @@
-/* Main Content */
+/* ====================================
+   1. LAYOUT PRINCIPALE
+==================================== */
 main {
     padding: 1.5rem 0;
 }
 
-.section-title {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: var(--secondary-color);
-}
-
-/* Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.skill-item {
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--dark-accent);
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    background-color: var(--light-accent);
-}
-
-.skill-item i {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-/* Carousel */
-.carousel {
-    position: relative;
-    margin: 2rem 0;
-    background-color: var(--dark-accent);
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-}
-
-.carousel-inner {
-    position: relative;
-    width: 100%;
-    height: 300px;
-}
-
-.carousel-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.carousel-item.active {
-    opacity: 1;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.carousel-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1.5rem;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-    color: var(--white);
-}
-
-.carousel-caption h4 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.carousel-controls {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.carousel-control {
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: var(--white);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.carousel-control:hover {
-    background: var(--primary-color);
-}
-
-.carousel-indicators {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: none;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.indicator.active {
-    background: var(--primary-color);
-    transform: scale(1.2);
-}
-
-/* Testimonials */
-.testimonial {
-    background-color: var(--dark-accent);
-    padding: 2rem;
-    border-radius: 8px;
-    margin: 2rem 0;
-}
-
-blockquote {
-    color: var(--text-color);
-    font-style: italic;
-}
-
-cite {
-    color: var(--primary-color);
-}
-
-/* Hero Section */
+/* ====================================
+   2. SEZIONE HERO
+==================================== */
 .hero-section {
     display: grid;
     gap: 2rem;
@@ -165,15 +15,18 @@ cite {
     margin-bottom: 3rem;
 }
 
+/* Blocchi principali dell'hero */
 .welcome-block {
-    order: 1;
+    order: 1; /* Su mobile appare prima */
 }
 
 .carousel-block {
-    order: 2;
+    order: 2; /* Su mobile appare dopo */
 }
 
-/* Welcome Section */
+/* ====================================
+   3. SEZIONE BENVENUTO
+==================================== */
 .welcome-section {
     text-align: center;
     padding: 2rem 1rem;
@@ -186,6 +39,7 @@ cite {
     box-shadow: var(--shadow);
 }
 
+/* Titolo della sezione */
 .section-title {
     font-size: 2rem;
     color: var(--primary-color);
@@ -194,6 +48,7 @@ cite {
     display: inline-block;
 }
 
+/* Linea decorativa sotto il titolo */
 .section-title::after {
     content: '';
     position: absolute;
@@ -214,7 +69,171 @@ cite {
     margin: 0 auto;
 }
 
-/* Media Queries */
+/* ====================================
+   4. GRIGLIA COMPETENZE
+==================================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonne su mobile */
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Singola competenza */
+.skill-item {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--dark-accent);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    background-color: var(--light-accent);
+}
+
+/* Icone delle competenze */
+.skill-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* ====================================
+   5. CAROUSEL PROGETTI
+==================================== */
+.carousel {
+    position: relative;
+    margin: 2rem 0;
+    background-color: var(--dark-accent);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+/* Container delle slide */
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+/* Singola slide */
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Didascalia slide */
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--white);
+}
+
+.carousel-caption h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Controlli carousel */
+.carousel-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Pulsanti prev/next */
+.carousel-control {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.carousel-control:hover {
+    background: var(--primary-color);
+}
+
+/* Indicatori slide */
+.carousel-indicators {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* ====================================
+   6. SEZIONE TESTIMONIANZE
+==================================== */
+.testimonial {
+    background-color: var(--dark-accent);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+blockquote {
+    color: var(--text-color);
+    font-style: italic;
+}
+
+cite {
+    color: var(--primary-color);
+}
+
+/* ====================================
+   7. MEDIA QUERIES
+==================================== */
+/* Tablet (768px e superiori) */
 @media (min-width: 768px) {
     .welcome-section {
         padding: 3rem 2rem;
@@ -229,10 +248,11 @@ cite {
     }
 
     .skills-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr); /* 4 colonne su tablet */
     }
 }
 
+/* Desktop (1024px e superiori) */
 @media (min-width: 1024px) {
     .hero-section {
         grid-template-columns: 1fr 1fr;
@@ -242,7 +262,7 @@ cite {
 
     .welcome-block, 
     .carousel-block {
-        order: 0; /* Reset dell'ordine su desktop */
+        order: 0; /* Ripristina l'ordine naturale su desktop */
     }
 
     .welcome-section {

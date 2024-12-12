@@ -1,4 +1,6 @@
-/* Base styles (Mobile First) */
+/* ====================================
+   1. LAYOUT PRINCIPALE
+==================================== */
 #chi-sono {
     padding: 1rem 0;
 }
@@ -9,7 +11,9 @@
     margin-top: 1.5rem;
 }
 
-/* Profile Image */
+/* ====================================
+   2. IMMAGINE PROFILO
+==================================== */
 .profile-image {
     position: relative;
     width: 100%;
@@ -24,6 +28,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Overlay gradiente */
 .profile-image::before {
     content: '';
     position: absolute;
@@ -40,6 +45,7 @@
     transition: opacity 0.3s ease;
 }
 
+/* Immagine interna */
 .profile-image img {
     width: 100%;
     height: 100%;
@@ -47,6 +53,7 @@
     transition: transform 0.5s ease;
 }
 
+/* Effetti hover */
 .profile-image:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -60,7 +67,9 @@
     opacity: 0;
 }
 
-/* About Text */
+/* ====================================
+   3. SEZIONE TESTO
+==================================== */
 .about-text {
     background-color: var(--dark-accent);
     padding: 1.5rem;
@@ -68,6 +77,7 @@
     box-shadow: var(--shadow);
 }
 
+/* Titoli */
 .about-text h3 {
     color: var(--primary-color);
     font-size: 1.4rem;
@@ -82,6 +92,7 @@
     border-bottom: 2px solid var(--primary-color);
 }
 
+/* Paragrafi */
 .about-text p {
     color: var(--white);
     line-height: 1.6;
@@ -89,7 +100,9 @@
     font-size: 0.95rem;
 }
 
-/* Skills List */
+/* ====================================
+   4. LISTA COMPETENZE
+==================================== */
 .skills-list {
     list-style: none;
     padding: 0;
@@ -97,6 +110,7 @@
     gap: 0.8rem;
 }
 
+/* Singola competenza */
 .skills-list li {
     background-color: var(--secondary-color);
     padding: 0.8rem 1rem;
@@ -113,6 +127,7 @@
     background-color: var(--primary-color);
 }
 
+/* Bullet point personalizzato */
 .skills-list li::before {
     content: "▹";
     color: var(--primary-color);
@@ -123,7 +138,9 @@
     color: var(--white);
 }
 
-/* Experience List */
+/* ====================================
+   5. LISTA ESPERIENZE
+==================================== */
 .experience-list {
     list-style: none;
     padding: 0;
@@ -137,7 +154,9 @@
     border-left: 3px solid var(--primary-color);
 }
 
-/* Contact Button */
+/* ====================================
+   6. PULSANTE CONTATTO
+==================================== */
 .btn {
     display: inline-block;
     background-color: var(--primary-color);
@@ -156,7 +175,9 @@
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
 
-/* Animations */
+/* ====================================
+   7. ANIMAZIONI
+==================================== */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -176,7 +197,10 @@
     animation-delay: 0.2s;
 }
 
-/* Media Queries */
+/* ====================================
+   8. MEDIA QUERIES
+==================================== */
+/* Tablet (768px e superiori) */
 @media (min-width: 768px) {
     #chi-sono {
         padding: 1.5rem 0;
@@ -199,10 +223,11 @@
     }
 
     .skills-list {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 colonne su tablet */
     }
 }
 
+/* Desktop (1024px e superiori) */
 @media (min-width: 1024px) {
     #chi-sono {
         padding: 2rem 0;
@@ -221,7 +246,7 @@
     }
 
     .skills-list {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* 3 colonne su desktop */
     }
 
     .about-text h3 {

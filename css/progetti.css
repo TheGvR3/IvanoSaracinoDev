@@ -1,4 +1,6 @@
-/* Projects Grid */
+/* ====================================
+   1. LAYOUT PRINCIPALE
+==================================== */
 .progetti-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -6,6 +8,10 @@
     margin-bottom: 2rem;
 }
 
+/* ====================================
+   2. CARD PROGETTO
+==================================== */
+/* Container progetto */
 .progetto {
     background-color: var(--dark-accent);
     border-radius: 8px;
@@ -14,21 +20,27 @@
     transition: transform 0.3s ease;
 }
 
+/* Effetto hover sulla card */
 .progetto:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
+/* Immagine progetto */
 .progetto img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
+/* Contenuto testuale */
 .progetto-content {
     padding: 1.5rem;
 }
 
+/* ====================================
+   3. LINK E INTERAZIONI
+==================================== */
 .project-link {
     color: var(--primary-color);
     text-decoration: none;
@@ -39,21 +51,25 @@
     text-decoration: underline;
 }
 
-/* Media Queries */
+/* ====================================
+   4. MEDIA QUERIES
+==================================== */
+/* Tablet (768px e superiori) */
 @media (min-width: 768px) {
     .progetti-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 colonne su tablet */
         gap: 2rem;
     }
 }
 
+/* Desktop (1024px e superiori) */
 @media (min-width: 1024px) {
     .progetti-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* 3 colonne su desktop */
         gap: 3rem;
     }
 
     .progetto img {
-        height: 250px;
+        height: 250px; /* Immagini più grandi su desktop */
     }
 } 
