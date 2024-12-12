@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio di [Tuo Nome] - Progetti e lavori realizzati">
-    <meta name="keywords" content="portfolio, progetti, sviluppo web, HTML, CSS, JavaScript">
     <title>Progetti</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -13,56 +12,147 @@
     <link rel="stylesheet" href="../css/progetti.css">
 </head>
 <body>
-    <!-- Contenitore per l'header -->
     <div id="header-container"></div>
 
     <main class="container">
         <section id="progetti">
             <h2 class="section-title">I Miei Progetti</h2>
             
+            <!-- =============================================
+                 PROGETTI IN EVIDENZA
+                 Dimensioni immagini: 800x400px
+                 Aspect ratio: 2:1
+                 Formato suggerito: .jpg o .webp
+                 Usare immagini ottimizzate per il web
+            ============================================= -->
             <div class="progetti-in-evidenza">
-                <article class="progetto-grande" id="progetto1">
-                    <img src="https://picsum.photos/800/400?random=1" alt="Ultimo Progetto Completato">
+                <!-- Ultimo Progetto in Corso -->
+                <article class="progetto-grande" id="ultimo-in-corso">
+                    <div class="status-badge in-progress">
+                        <i class="fas fa-code-branch"></i> In Sviluppo
+                    </div>
+                    <!-- Immagine Grande: 800x400px -->
+                    <img src="https://picsum.photos/800/400?random=1" 
+                         alt="E-commerce Dashboard"
+                         width="800"
+                         height="400">
                     <div class="progetto-content">
-                        <h3>Ultimo Progetto Completato</h3>
-                        <p>Descrizione dettagliata dell'ultimo progetto completato. Tecnologie utilizzate, sfide affrontate e risultati ottenuti.</p>
-                        <a href="#" class="project-link">Vedi Progetto</a>
+                        <h3>E-commerce Dashboard</h3>
+                        <p>Sviluppo di un pannello di controllo per la gestione di un e-commerce.</p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Node.js</span>
+                        </div>
+                        <a href="#" class="project-link">Dettagli Progetto</a>
                     </div>
                 </article>
                 
-                <article class="progetto-grande" id="progetto2">
-                    <img src="https://picsum.photos/800/400?random=2" alt="Progetto in Corso">
+                <!-- Ultimo Progetto Completato -->
+                <article class="progetto-grande" id="ultimo-completato">
+                    <div class="status-badge completed">
+                        <i class="fas fa-check-circle"></i> Completato
+                    </div>
+                    <!-- Immagine Grande: 800x400px -->
+                    <img src="../images/project-images/battery_level800x400.jpg" 
+                         alt="Battery level reader"
+                         width="800"
+                         height="400">
                     <div class="progetto-content">
-                        <h3>Progetto in Corso</h3>
-                        <p>Descrizione del progetto attualmente in sviluppo. Obiettivi, tecnologie utilizzate e stato di avanzamento.</p>
-                        <a href="#" class="project-link">Dettagli Progetto</a>
+                        <h3>Battery Reader</h3>
+                        <p>App mobile per il tracciamento della carica della batteria.</p>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="https://thegvr3.github.io/Battery_Reader/" class="project-link">Vedi Progetto</a>
                     </div>
                 </article>
             </div>
             
-            <h3 class="sub-section-title">Altri Progetti</h3>
+            <!-- =============================================
+                 GRIGLIA PROGETTI
+                 Dimensioni immagini: 400x200px
+                 Aspect ratio: 2:1
+                 Formato suggerito: .jpg o .webp
+                 Usare immagini ottimizzate per il web
+            ============================================= -->
+            <h3 class="sub-section-title">Archivio Progetti</h3>
             <div class="progetti-grid">
-                <article class="progetto" id="progetto3">
-                    <img src="https://picsum.photos/400/200?random=3" alt="Progetto 3">
+                <!-- Progetto 1 -->
+                <article class="progetto">
+                    <div class="status-badge completed">
+                        <i class="fas fa-check-circle"></i> Completato
+                    </div>
+                    <!-- Immagine Card: 400x200px -->
+                    <img src="https://picsum.photos/400/200?random=3" 
+                         alt="Social Media Dashboard"
+                         width="400"
+                         height="200">
                     <div class="progetto-content">
-                        <h4>Progetto 3</h4>
-                        <p>Breve descrizione del progetto 3.</p>
+                        <h4>Social Media Dashboard</h4>
+                        <p>Dashboard per l'analisi delle performance sui social media.</p>
+                        <div class="tech-stack">
+                            <span>Vue.js</span>
+                            <span>Express</span>
+                        </div>
                         <a href="#" class="project-link">Vedi Progetto</a>
                     </div>
                 </article>
-                <!-- Altri progetti simili -->
+
+                <!-- Progetto 2 -->
+                <article class="progetto">
+                    <div class="status-badge in-progress">
+                        <i class="fas fa-code-branch"></i> In Sviluppo
+                    </div>
+                    <!-- Immagine Card: 400x200px -->
+                    <img src="https://picsum.photos/400/200?random=4" 
+                         alt="Chat App"
+                         width="400"
+                         height="200">
+                    <div class="progetto-content">
+                        <h4>Real-time Chat App</h4>
+                        <p>Applicazione di messaggistica in tempo reale.</p>
+                        <div class="tech-stack">
+                            <span>Socket.io</span>
+                            <span>Express</span>
+                        </div>
+                        <a href="#" class="project-link">Vedi Progetto</a>
+                    </div>
+                </article>
+
+                <!-- Template per nuovo progetto (copiare questo blocco)
+                <article class="progetto">
+                    <div class="status-badge completed">
+                        <i class="fas fa-check-circle"></i> Completato
+                    </div>
+                    [Inserisci immagine 400x200px qui]
+                    <img src="percorso/immagine.jpg" 
+                         alt="Nome Progetto"
+                         width="400"
+                         height="200">
+                    <div class="progetto-content">
+                        <h4>Nome Progetto</h4>
+                        <p>Descrizione breve del progetto.</p>
+                        <div class="tech-stack">
+                            <span>Tecnologia 1</span>
+                            <span>Tecnologia 2</span>
+                        </div>
+                        <a href="#" class="project-link">Vedi Progetto</a>
+                    </div>
+                </article>
+                -->
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content" id="footer-content"></div>
         </div>
     </footer>
 
-    <script src="../js/componetsLoader.js"></script>
+    <script src="../js/componentsLoader.js"></script>
     <script src="../js/script.js"></script>
 </body>
-</html> 
+</html>

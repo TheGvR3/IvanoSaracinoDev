@@ -1,75 +1,223 @@
 /* ====================================
-   1. LAYOUT PRINCIPALE
+   1. VARIABLES & RESET
 ==================================== */
-.progetti-grid {
+:root {
+    --card-padding: 1rem;
+    --card-radius: 12px;
+    --card-spacing: 1.25rem;
+    --transition-speed: 0.3s;
+  }
+  
+  h2 {
+    margin-top: 1rem;
+  }
+  /* ====================================
+     2. MOBILE-FIRST LAYOUT
+  ==================================== */
+  .progetti-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: var(--card-spacing);
+    padding: var(--card-padding);
+  }
+  
+  .progetti-in-evidenza {
+    display: grid;
+    gap: var(--card-spacing);
     margin-bottom: 2rem;
-}
-
-/* ====================================
-   2. CARD PROGETTO
-==================================== */
-/* Container progetto */
-.progetto {
+  }
+  
+  /* ====================================
+     3. CARD STYLES
+  ==================================== */
+  .progetto,
+  .progetto-grande {
     background-color: var(--dark-accent);
-    border-radius: 8px;
+    border-radius: var(--card-radius);
     overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
-}
-
-/* Effetto hover sulla card */
-.progetto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-/* Immagine progetto */
-.progetto img {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-speed) ease-in-out;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Card Image Container */
+  .progetto img,
+  .progetto-grande img {
     width: 100%;
-    height: 200px;
+    aspect-ratio: 16/9;
     object-fit: cover;
-}
-
-/* Contenuto testuale */
-.progetto-content {
-    padding: 1.5rem;
-}
-
-/* ====================================
-   3. LINK E INTERAZIONI
-==================================== */
-.project-link {
+    transition: transform var(--transition-speed) ease;
+  }
+  
+  /* Card Content */
+  .progetto-content {
+    padding: 1.25rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  /* Typography */
+  .progetto-content h3,
+  .progetto-content h4 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+  }
+  
+  .progetto-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    flex-grow: 1;
+  }
+  
+  /* Links */
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
     color: var(--primary-color);
     text-decoration: none;
-    font-weight: bold;
+    transition: all var(--transition-speed) ease;
+  }
+  
+  .project-link::after {
+    content: "→";
+    transition: transform var(--transition-speed) ease;
+  }
+  
+  /* Hover Effects */
+  @media (hover: hover) {
+    .progetto:hover,
+    .progetto-grande:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+  
+    .progetto:hover img,
+    .progetto-grande:hover img {
+      transform: scale(1.05);
+    }
+  
+    .project-link:hover {
+      color: var(--primary-color-light);
+    }
+  
+    .project-link:hover::after {
+      transform: translateX(4px);
+    }
+  }
+  
+  /* ====================================
+     4. RESPONSIVE DESIGN
+  ==================================== */
+  /* Tablet (600px+) */
+  @media (min-width: 600px) {
+    .progetti-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+  
+  /* Large Tablet (768px+) */
+  @media (min-width: 768px) {
+    .progetti-in-evidenza {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Desktop (1024px+) */
+  @media (min-width: 1024px) {
+    .progetti-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  
+    .progetto-content {
+      padding: 1.5rem;
+    }
+  }
+  
+  /* Large Desktop (1280px+) */
+  @media (min-width: 1280px) {
+    .progetti-grid {
+      gap: 2.5rem;
+    }
+  }
+
+  /* ====================================
+   5. STATUS BADGES
+==================================== */
+.status-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 2;
+    backdrop-filter: blur(8px);
 }
 
-.project-link:hover {
-    text-decoration: underline;
+.status-badge i {
+    font-size: 1rem;
+}
+
+.status-badge.in-progress {
+    background-color: rgba(255, 171, 0, 0.9);
+    color: #000;
+}
+
+.status-badge.completed {
+    background-color: rgba(46, 213, 115, 0.9);
+    color: #000;
+}
+
+.status-badge.archived {
+    background-color: rgba(116, 125, 140, 0.9);
+    color: #fff;
 }
 
 /* ====================================
-   4. MEDIA QUERIES
+   6. TECH STACK TAGS
 ==================================== */
-/* Tablet (768px e superiori) */
-@media (min-width: 768px) {
-    .progetti-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 colonne su tablet */
-        gap: 2rem;
-    }
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
 }
 
-/* Desktop (1024px e superiori) */
-@media (min-width: 1024px) {
-    .progetti-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 colonne su desktop */
-        gap: 3rem;
-    }
+.tech-stack span {
+    background-color: var(--dark-accent-lighter);
+    color: var(--text-secondary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
 
-    .progetto img {
-        height: 250px; /* Immagini più grandi su desktop */
-    }
-} 
+/* ====================================
+   7. CARD POSITIONING
+==================================== */
+.progetto,
+.progetto-grande {
+    position: relative;
+}
+
+/* Update hover effect to not interfere with badges */
+.progetto:hover img,
+.progetto-grande:hover img {
+    transform: scale(1.05);
+}
