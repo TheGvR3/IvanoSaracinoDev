@@ -137,6 +137,7 @@ header p {
 }
 
 .mobile-nav ul li a i {
+    color: var(--primary-color);
     font-size: 1.3rem;
 }
 
@@ -162,9 +163,14 @@ header p {
         background-color: var(--dark-accent);
     }
 
-    .desktop-nav ul {
+    .desktop-nav .container {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex;
         gap: 2rem;
         padding: 1rem 0;
         list-style: none;
@@ -181,6 +187,36 @@ header p {
 
     .desktop-nav ul li a:hover {
         background-color: var(--primary-color);
+    }
+
+    .desktop-nav ul li a i{
+        color: var(--primary-color);
+    }
+
+    /* Theme Toggle Button Styles */
+    .theme-toggle {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background-color: var(--dark-accent);
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+        background-color: var(--primary-color);
+        color: var(--white);
+    }
+
+    .theme-toggle .theme-text {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    /* Rimuovi gli stili precedenti che potrebbero interferire */
+    .desktop-nav ul li:last-child {
+        margin-left: auto;
     }
 }
 
@@ -415,4 +451,54 @@ footer {
     nav ul li {
         margin: 0 1rem;
     }
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.theme-toggle .theme-text{
+    color: var(--white);
+}
+
+.theme-toggle:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Stile specifico per il mobile */
+.mobile-nav .theme-toggle {
+    width: 80%;
+    max-width: 200px;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.mobile-nav .theme-toggle i {
+    font-size: 1rem;
+}
+
+.mobile-nav .theme-toggle .theme-text {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.mobile-nav .theme-toggle:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: scale(1.05);
 } 
