@@ -1,20 +1,32 @@
 <!-- Header -->
 <header>
     <div class="container">
-        <div class="logo">
-            <img src="../images/logo.png" alt="Logo [Tuo Nome]">
+        <div class="header-left">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Logo [Tuo Nome]">
+            </div>
+            <div class="header-text">
+                <h1>Ivano Saracino</h1>
+                <p>Sviluppatore Full Stack</p>
+            </div>
         </div>
-        <div class="header-text">
-            <h1>Ivano Saracino</h1>
-            <p>Sviluppatore Full Stack</p>
-        </div>
+        <button class="hamburger" type="button" aria-label="Menu">☰</button>
     </div>
 </header>
 
-<!-- Navigation -->
-<nav>
+<!-- Mobile Navigation (spostato fuori dal container) -->
+<nav class="mobile-nav">
+    <ul>
+        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="progetti.html"><i class="fas fa-code"></i> Progetti</a></li>
+        <li><a href="chi-sono.html"><i class="fas fa-user"></i> Chi Sono</a></li>
+        <li><a href="contatti.html"><i class="fas fa-envelope"></i> Contatti</a></li>
+    </ul>
+</nav>
+
+<!-- Desktop Navigation -->
+<nav class="desktop-nav">
     <div class="container">
-        <button class="hamburger">☰</button>
         <ul>
             <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="progetti.html"><i class="fas fa-code"></i> Progetti</a></li>

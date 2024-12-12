@@ -157,30 +157,103 @@ cite {
     color: var(--primary-color);
 }
 
+/* Hero Section */
+.hero-section {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.welcome-block {
+    order: 1;
+}
+
+.carousel-block {
+    order: 2;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--dark-accent);
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.welcome-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--white);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 /* Media Queries */
 @media (min-width: 768px) {
-    /* Grid Layouts */
-    .progetti-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .welcome-section {
+        padding: 3rem 2rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .welcome-text {
+        font-size: 1.2rem;
     }
 
     .skills-grid {
         grid-template-columns: repeat(4, 1fr);
     }
-
-    /* Carousel */
-    .carousel-item img {
-        height: 350px;
-    }
 }
 
 @media (min-width: 1024px) {
-    /* Grid Layouts */
-    .progetti-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .hero-section {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+        gap: 3rem;
     }
 
-    /* Carousel */
+    .welcome-block, 
+    .carousel-block {
+        order: 0; /* Reset dell'ordine su desktop */
+    }
+
+    .welcome-section {
+        padding: 4rem 2rem;
+    }
+
+    .carousel {
+        height: 100%;
+        margin: 0;
+    }
+
     .carousel-item img {
         height: 400px;
     }

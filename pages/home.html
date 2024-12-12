@@ -20,55 +20,58 @@
     
     <!-- Main Content -->
     <main class="container">
-        <section id="home">
-            <h2 class="section-title">Benvenuto nel mio Portfolio</h2>
-            <p>Qui troverai una selezione dei miei migliori progetti e potrai conoscermi meglio. Esplora le varie sezioni per scoprire le mie competenze e il mio lavoro.</p>
-        </section>
+        <div class="hero-section">
+            <section id="home" class="welcome-block">
+                <div class="welcome-section">
+                    <h2 class="section-title">Benvenuto nel mio Portfolio</h2>
+                    <p class="welcome-text">Qui troverai una selezione dei miei migliori progetti e potrai conoscermi meglio. Esplora le varie sezioni per scoprire le mie competenze e il mio lavoro.</p>
+                </div>
+            </section>
 
-        <section id="progetti-carousel">
-            <h3>I Miei Progetti in Evidenza</h3>
-            <div class="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-index="0">
-                        <img src="https://picsum.photos/800/400?random=1" alt="Progetto 1">
-                        <div class="carousel-caption">
-                            <h4>Progetto 1</h4>
-                            <p>Breve descrizione del progetto 1</p>
-                            <a href="progetti.html#progetto1" class="btn">Scopri di più</a>
+            <section id="progetti-carousel" class="carousel-block">
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-index="0">
+                            <img src="https://picsum.photos/800/400?random=1" alt="Progetto 1">
+                            <div class="carousel-caption">
+                                <h4>Progetto 1</h4>
+                                <p>Breve descrizione del progetto 1</p>
+                                <a href="progetti.html#progetto1" class="btn">Scopri di più</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-index="1">
+                            <img src="https://picsum.photos/800/400?random=2" alt="Progetto 2">
+                            <div class="carousel-caption">
+                                <h4>Progetto 2</h4>
+                                <p>Breve descrizione del progetto 2</p>
+                                <a href="progetti.html#progetto2" class="btn">Scopri di più</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-index="2">
+                            <img src="https://picsum.photos/800/400?random=3" alt="Progetto 3">
+                            <div class="carousel-caption">
+                                <h4>Progetto 3</h4>
+                                <p>Breve descrizione del progetto 3</p>
+                                <a href="progetti.html#progetto3" class="btn">Scopri di più</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="carousel-item" data-index="1">
-                        <img src="https://picsum.photos/800/400?random=2" alt="Progetto 2">
-                        <div class="carousel-caption">
-                            <h4>Progetto 2</h4>
-                            <p>Breve descrizione del progetto 2</p>
-                            <a href="progetti.html#progetto2" class="btn">Scopri di più</a>
+                    <div class="carousel-controls">
+                        <button class="carousel-control prev" aria-label="Precedente">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="carousel-indicators">
+                            <button class="indicator active" data-index="0" aria-label="Slide 1"></button>
+                            <button class="indicator" data-index="1" aria-label="Slide 2"></button>
+                            <button class="indicator" data-index="2" aria-label="Slide 3"></button>
                         </div>
-                    </div>
-                    <div class="carousel-item" data-index="2">
-                        <img src="https://picsum.photos/800/400?random=3" alt="Progetto 3">
-                        <div class="carousel-caption">
-                            <h4>Progetto 3</h4>
-                            <p>Breve descrizione del progetto 3</p>
-                            <a href="progetti.html#progetto3" class="btn">Scopri di più</a>
-                        </div>
+                        <button class="carousel-control next" aria-label="Successivo">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="carousel-controls">
-                    <button class="carousel-control prev" aria-label="Precedente">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <div class="carousel-indicators">
-                        <button class="indicator active" data-index="0" aria-label="Slide 1"></button>
-                        <button class="indicator" data-index="1" aria-label="Slide 2"></button>
-                        <button class="indicator" data-index="2" aria-label="Slide 3"></button>
-                    </div>
-                    <button class="carousel-control next" aria-label="Successivo">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <section id="competenze">
             <h3>Le Mie Competenze</h3>

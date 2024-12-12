@@ -1,43 +1,52 @@
 // Gestione del form di contatto
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav ul');
+    const mobileMenu = document.querySelector('.mobile-nav ul');
+    let isMenuOpen = false;
 
-    // Gestione menu hamburger
-    if (hamburger) {
+    if (hamburger && mobileMenu) {
+        // Toggle menu
         hamburger.addEventListener('click', function(e) {
             e.stopPropagation();
-            const navMenu = this.nextElementSibling;
-            navMenu.classList.toggle('show');
+            isMenuOpen = !isMenuOpen;
+            
+            // Toggle classes
+            mobileMenu.classList.toggle('show');
+            hamburger.classList.toggle('active');
+            
+            // Toggle hamburger icon
+            hamburger.innerHTML = isMenuOpen ? '✕' : '☰';
+            
+            // Toggle body scroll
+            document.body.style.overflow = isMenuOpen ? 'hidden' : '';
         });
-    }
 
-    // Chiudi il menu quando si clicca fuori
-    document.addEventListener('click', function(e) {
-        if (navMenu.classList.contains('show') && !nav.contains(e.target)) {
-            navMenu.classList.remove('show');
+        // Close menu when clicking links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                closeMenu();
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (isMenuOpen && !mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        // Prevent clicks inside menu from closing it
+        mobileMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+
+        // Close menu function
+        function closeMenu() {
+            isMenuOpen = false;
+            mobileMenu.classList.remove('show');
+            hamburger.classList.remove('active');
+            hamburger.innerHTML = '☰';
+            document.body.style.overflow = '';
         }
-    });
-
-    // Chiudi il menu quando si clicca su un link
-    document.querySelectorAll('nav ul li a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu.classList.contains('show')) {
-                navMenu.classList.remove('show');
-            }
-        });
-    });
-
-    // Smooth scrolling per i link interni
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+    }
 }); 
