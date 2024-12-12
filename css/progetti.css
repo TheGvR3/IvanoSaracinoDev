@@ -37,4 +37,23 @@
 
 .project-link:hover {
     text-decoration: underline;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .progetti-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .progetti-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+
+    .progetto img {
+        height: 250px;
+    }
 } 

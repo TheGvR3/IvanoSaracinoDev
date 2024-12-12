@@ -161,6 +161,7 @@ form, .contact-info {
     }
 
     .contact-content {
+        grid-template-columns: 3fr 2fr;
         gap: 2rem;
     }
 
@@ -199,11 +200,11 @@ form, .contact-info {
     }
 
     form {
-        order: 1; /* Il form torna a sinistra su desktop */
+        order: 1;
     }
 
     .contact-info {
-        order: 2; /* Le info di contatto vanno a destra su desktop */
+        order: 2;
     }
 
     #google-map iframe {
