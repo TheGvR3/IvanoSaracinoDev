@@ -1,3 +1,6 @@
+/* ====================================
+   1. CLASSE CAROUSEL
+==================================== */
 class Carousel {
     constructor(element) {
         this.carousel = element;
@@ -7,16 +10,20 @@ class Carousel {
         this.nextBtn = this.carousel.querySelector('.next');
         this.currentIndex = 0;
         this.intervalId = null;
-        this.intervalTime = 4000; // 5 secondi per slide
+        this.intervalTime = 4000; // 4 secondi per slide
 
         this.init();
     }
 
+    /* ====================================
+       2. INIZIALIZZAZIONE
+    ==================================== */
     init() {
         // Event listeners
         this.prevBtn.addEventListener('click', () => this.prev());
         this.nextBtn.addEventListener('click', () => this.next());
         
+        // Gestione indicatori
         this.indicators.forEach(indicator => {
             indicator.addEventListener('click', (e) => {
                 const index = parseInt(e.target.dataset.index);
@@ -24,7 +31,9 @@ class Carousel {
             });
         });
 
-        // Touch events for mobile
+        /* ====================================
+           3. GESTIONE TOUCH
+        ==================================== */
         let touchStartX = 0;
         let touchEndX = 0;
 
@@ -37,10 +46,13 @@ class Carousel {
             this.handleSwipe(touchStartX, touchEndX);
         }, false);
 
+        /* ====================================
+           4. AUTOPLAY
+        ==================================== */
         // Start autoplay
         this.startAutoplay();
 
-        // Pause autoplay on hover
+        // Pause su hover
         this.carousel.addEventListener('mouseenter', () => this.stopAutoplay());
         this.carousel.addEventListener('mouseleave', () => this.startAutoplay());
     }

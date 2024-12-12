@@ -357,6 +357,10 @@ footer {
     color: var(--primary-color);
 }
 
+.footer-section ul {
+    list-style: none;
+}
+
 /* Copyright */
 .footer-bottom {
     text-align: center;
