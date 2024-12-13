@@ -31,7 +31,7 @@ main {
     text-align: center;
     padding: 2rem 1rem;
     background-color: var(--dark-accent);
-    border-radius: 8px;
+    border-radius: 0;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -84,7 +84,7 @@ main {
     text-align: center;
     padding: 1rem;
     background-color: var(--dark-accent);
-    border-radius: 8px;
+    border-radius: 0;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -109,7 +109,7 @@ main {
     position: relative;
     margin: 2rem 0;
     background-color: var(--dark-accent);
-    border-radius: 8px;
+    border-radius: 0;
     overflow: hidden;
     box-shadow: var(--shadow);
 }
@@ -217,7 +217,7 @@ main {
 .testimonial {
     background-color: var(--dark-accent);
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: 0;
     margin: 2rem 0;
 }
 

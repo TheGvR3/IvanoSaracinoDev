@@ -33,7 +33,7 @@
   .progetto,
   .progetto-grande {
     background-color: var(--dark-accent);
-    border-radius: var(--card-radius);
+    border-radius: 0;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all var(--transition-speed) ease-in-out;

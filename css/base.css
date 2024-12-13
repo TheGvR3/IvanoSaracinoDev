@@ -2,6 +2,7 @@
    1. VARIABILI CSS
 ==================================== */
 :root {
+    --font-family: 'Josefin Sans', sans-serif;
     /* Dark Theme (default) */
     --primary-color: #3498db;
     --secondary-color: #1a1a1a;
@@ -45,7 +46,7 @@ html {
 
 /* Sfondo con overlay per tutte le pagine */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-family);
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -99,4 +100,5 @@ h1, h2, h3, h4, h5, h6 {
 /* Paragrafi */
 p {
     margin-bottom: 1rem;
-} 
+}
+

@@ -17,7 +17,7 @@
 form {
     background-color: var(--dark-accent);
     padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: 0;
     box-shadow: var(--shadow);
     order: 2; /* Il form appare dopo le info di contatto su mobile */
 }
