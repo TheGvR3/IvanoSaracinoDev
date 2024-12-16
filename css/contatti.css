@@ -2,67 +2,60 @@
    1. LAYOUT PRINCIPALE
 ==================================== */
 #contatti {
-    padding: 1rem 0;
+    padding: 3rem 0;
 }
 
 .contact-content {
     display: grid;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* ====================================
-   2. FORM DI CONTATTO
+   2. FORM CONTATTI
 ==================================== */
 form {
-    background-color: var(--dark-accent);
-    padding: 1.5rem;
-    border-radius: 0;
-    box-shadow: var(--shadow);
-    order: 2; /* Il form appare dopo le info di contatto su mobile */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-/* Campi input e textarea */
+/* Campi input */
 form input,
 form textarea {
     width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    background-color: var(--light-accent);
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--light-accent);
     color: var(--white);
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
 }
 
-form textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-/* Stati focus dei campi */
 form input:focus,
 form textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    background-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(228, 19, 19, 0.1);
 }
 
-/* Placeholder */
 form input::placeholder,
 form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+form textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
 /* Pulsante invio */
 form button {
-    width: 100%;
-    padding: 0.8rem;
     background-color: var(--primary-color);
     color: var(--white);
-    border: none;
-    border-radius: 5px;
+    padding: 1rem;
+    border: 2px solid var(--primary-color);
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
@@ -70,84 +63,103 @@ form button {
 }
 
 form button:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    background-color: transparent;
+    color: var(--primary-color);
+    transform: translateY(-3px);
 }
 
 /* ====================================
-   3. INFORMAZIONI DI CONTATTO
+   3. INFO CONTATTO
 ==================================== */
 .contact-info {
     background-color: var(--dark-accent);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    order: 1; /* Le info di contatto appaiono prima del form su mobile */
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(228, 19, 19, 0.1);
+    position: relative;
+    overflow: hidden;
 }
 
-/* Titolo sezione */
+.contact-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--primary-color) 50%, 
+        transparent 100%
+    );
+}
+
 .contact-info h3 {
     color: var(--primary-color);
-    margin-bottom: 1.2rem;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
 }
 
-/* Paragrafi info */
 .contact-info p {
-    margin-bottom: 1rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    color: var(--white);
-    font-size: 0.9rem;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    color: var(--text-color);
 }
 
-.contact-info p:last-child {
-    margin-bottom: 0;
-}
-
-/* Link nelle info */
-.contact-info a {
+.contact-info i {
     color: var(--primary-color);
+    font-size: 1.2rem;
+    min-width: 24px;
+}
+
+/* Link contatti */
+.contact-info a {
+    color: var(--white);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.contact-info a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: #2980b9;
-    text-decoration: underline;
+    color: var(--primary-color);
 }
 
-/* Icone nelle info */
-.contact-info i {
-    color: var(--primary-color);
-    width: 20px;
-    text-align: center;
-    font-size: 1.1rem;
+.contact-info a:hover::after {
+    width: 100%;
 }
 
 /* ====================================
-   4. SEZIONE MAPPA
+   4. SOCIAL LINKS
 ==================================== */
-#mappa {
+.social-links {
+    display: flex;
+    gap: 1rem;
     margin-top: 2rem;
 }
 
-#mappa h2 {
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
+.social-links a {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
 }
 
-#google-map {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-}
-
-#google-map iframe {
-    width: 100%;
-    height: 300px;
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
 }
 
 /* ====================================
@@ -175,64 +187,19 @@ form, .contact-info {
 /* ====================================
    6. MEDIA QUERIES
 ==================================== */
-/* Tablet (768px e superiori) */
 @media (min-width: 768px) {
-    #contatti {
-        padding: 1.5rem 0;
-    }
-
     .contact-content {
-        grid-template-columns: 3fr 2fr;
-        gap: 2rem;
-    }
-
-    form, .contact-info {
-        padding: 2rem;
-    }
-
-    form input,
-    form textarea {
-        padding: 1rem;
-        font-size: 1rem;
-    }
-
-    .contact-info h3 {
-        font-size: 1.4rem;
-    }
-
-    .contact-info p {
-        font-size: 1rem;
-    }
-
-    #google-map iframe {
-        height: 350px;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
     }
 }
 
-/* Desktop (1024px e superiori) */
 @media (min-width: 1024px) {
     #contatti {
-        padding: 2rem 0;
+        padding: 4rem 0;
     }
 
-    .contact-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-    }
-
-    form {
-        order: 1; /* Form a sinistra su desktop */
-    }
-
-    .contact-info {
-        order: 2; /* Info a destra su desktop */
-    }
-
-    #google-map iframe {
-        height: 450px;
-    }
-
-    .contact-info h3 {
-        font-size: 1.5rem;
+    form, .contact-info {
+        padding: 3rem;
     }
 } 

@@ -55,6 +55,16 @@ class Carousel {
         // Pause su hover
         this.carousel.addEventListener('mouseenter', () => this.stopAutoplay());
         this.carousel.addEventListener('mouseleave', () => this.startAutoplay());
+
+        // Gestione dei click sulle slide
+        this.items.forEach(item => {
+            const link = item.querySelector('.carousel-caption .btn');
+            if (link) {
+                link.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Previene che il click sul link attivi altri eventi
+                });
+            }
+        });
     }
 
     handleSwipe(startX, endX) {

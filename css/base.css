@@ -4,14 +4,14 @@
 :root {
     --font-family: 'Josefin Sans', sans-serif;
     /* Dark Theme (default) */
-    --primary-color: #3498db;
-    --secondary-color: #1a1a1a;
+    --primary-color: #e41313;
+    --secondary-color: #111111;
     --text-color: #ffffff;
-    --bg-color: #0e0e0e;
-    --dark-accent: #2a2a2a;
-    --light-accent: #404040;
+    --bg-color: #0a0a0a;
+    --dark-accent: #151515;
+    --light-accent: #202020;
     --white: #ffffff;
-    --shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     --transition: all 0.3s ease;
 }
 
@@ -19,7 +19,7 @@
    2. TEMA CHIARO
 ==================================== */
 :root[data-theme="light"] {
-    --primary-color: #2980b9;
+    --primary-color: #e41313; 
     --secondary-color: #f5f5f5;
     --text-color: #333333;
     --bg-color: #ffffff;
@@ -101,4 +101,48 @@ h1, h2, h3, h4, h5, h6 {
 p {
     margin-bottom: 1rem;
 }
+
+/* ====================================
+   6. COMPONENTI COMUNI
+==================================== */
+.box-styled {
+    background-color: var(--dark-accent);
+    box-shadow: 0 0 20px rgba(228, 19, 19, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.box-styled::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--primary-color) 50%, 
+        transparent 100%
+    );
+}
+
+/* Variante con padding standard */
+.box-styled-padded {
+    padding: 2rem;
+}
+
+/* Variante con hover */
+.box-styled-hover {
+    transition: transform 0.3s ease;
+}
+
+.box-styled-hover:hover {
+    transform: translateY(-5px);
+}
+
+/* Variante con bordo interno per immagini */
+.box-styled-bordered {
+    padding: 0.8rem;
+}
+
 

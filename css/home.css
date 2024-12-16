@@ -29,14 +29,29 @@ main {
 ==================================== */
 .welcome-section {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 2rem;
     background-color: var(--dark-accent);
-    border-radius: 0;
+    box-shadow: 0 0 20px rgba(228, 19, 19, 0.1);
+    position: relative;
+    overflow: hidden;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: var(--shadow);
+}
+
+.welcome-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--primary-color) 50%, 
+        transparent 100%
+    );
 }
 
 /* Titolo della sezione */
@@ -84,9 +99,24 @@ main {
     text-align: center;
     padding: 1rem;
     background-color: var(--dark-accent);
-    border-radius: 0;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(228, 19, 19, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--primary-color) 50%, 
+        transparent 100%
+    );
 }
 
 .skill-item:hover {
@@ -102,6 +132,11 @@ main {
     margin-bottom: 0.5rem;
 }
 
+.parallelogram {
+    --p: 7px; 
+    clip-path: polygon(var(--p) 0,100% 0,calc(100% - var(--p)) 100%,0 100%);
+  }
+
 /* ====================================
    5. CAROUSEL PROGETTI
 ==================================== */
@@ -109,9 +144,7 @@ main {
     position: relative;
     margin: 2rem 0;
     background-color: var(--dark-accent);
-    border-radius: 0;
     overflow: hidden;
-    box-shadow: var(--shadow);
 }
 
 /* Container delle slide */
@@ -149,13 +182,31 @@ main {
     left: 0;
     right: 0;
     padding: 1.5rem;
+    padding-bottom: 4rem; /* Spazio aggiuntivo per i controlli */
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
     color: var(--white);
+    z-index: 1;
 }
 
 .carousel-caption h4 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+}
+
+.carousel-caption .btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.carousel-caption .btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
 }
 
 /* Controlli carousel */
@@ -169,6 +220,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    z-index: 2; /* Assicura che i controlli siano sopra altri elementi */
 }
 
 /* Pulsanti prev/next */
@@ -217,8 +269,24 @@ main {
 .testimonial {
     background-color: var(--dark-accent);
     padding: 2rem;
-    border-radius: 0;
+    box-shadow: 0 0 20px rgba(228, 19, 19, 0.1);
+    position: relative;
+    overflow: hidden;
     margin: 2rem 0;
+}
+
+.testimonial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--primary-color) 50%, 
+        transparent 100%
+    );
 }
 
 blockquote {
@@ -277,4 +345,59 @@ cite {
     .carousel-item img {
         height: 400px;
     }
+
+    .carousel-caption {
+        padding-bottom: 5rem; /* Più spazio su desktop */
+    }
+    
+    .carousel-controls {
+        bottom: 1rem; /* Posizione leggermente più in basso su desktop */
+    }
+} 
+
+/* Hero Section */
+.hero-content {
+    background-color: var(--dark-accent);
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(228, 19, 19, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--primary-color) 50%, 
+        transparent 100%
+    );
+}
+
+/* Featured Section */
+.featured-section {
+    background-color: var(--dark-accent);
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(228, 19, 19, 0.1);
+    position: relative;
+    overflow: hidden;
+    margin-top: 3rem;
+}
+
+.featured-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--primary-color) 50%, 
+        transparent 100%
+    );
 } 

@@ -91,7 +91,7 @@ header p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     z-index: 1000;
     transition: all 0.3s ease;
     padding: 2rem;
@@ -128,26 +128,56 @@ header p {
 .mobile-nav ul li a {
     color: var(--white);
     text-decoration: none;
-    font-size: 1.5rem;
-    padding: 1rem;
+    font-size: 1.2rem;
+    padding: 1.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
+    background-color: var(--dark-accent);
+    border-left: 4px solid var(--primary-color);
     transition: all 0.3s ease;
     width: 100%;
+    border-radius: 0;
 }
 
 .mobile-nav ul li a i {
     color: var(--primary-color);
     font-size: 1.3rem;
+    min-width: 25px;
 }
 
 .mobile-nav ul li a:hover {
     background-color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.mobile-nav ul li a:hover i {
+    color: var(--white);
+}
+
+/* Stile specifico per il pulsante tema */
+.mobile-nav ul li .theme-toggle {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    border-left: none;
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 3rem;
+}
+
+.mobile-nav ul li .theme-toggle:hover {
+    background-color: var(--primary-color);
     transform: scale(1.05);
+}
+
+.mobile-nav ul li .theme-toggle i {
+    color: var(--primary-color);
+}
+
+.mobile-nav ul li .theme-toggle:hover i {
+    color: var(--white);
 }
 
 /* ====================================
@@ -181,16 +211,34 @@ header p {
         color: var(--white);
         text-decoration: none;
         font-size: 1rem;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
+        padding: 0.8rem 1.2rem;
+        border-radius: 0;
         transition: all 0.3s ease;
+        border-bottom: 3px solid transparent;
     }
 
     .desktop-nav ul li a:hover {
-        background-color: var(--primary-color);
+        background-color: var(--dark-accent);
+        border-bottom: 3px solid var(--primary-color);
+        color: var(--primary-color);
     }
 
     .desktop-nav ul li a i {
+        color: var(--primary-color);
+        margin-right: 0.5rem;
+    }
+
+    /* Stile specifico per il toggle tema desktop */
+    .desktop-nav .theme-toggle {
+        padding: 0.8rem 1.2rem;
+        border-radius: 0;
+        background-color: var(--dark-accent);
+        border-bottom: 3px solid transparent;
+    }
+
+    .desktop-nav .theme-toggle:hover {
+        border-bottom: 3px solid var(--primary-color);
+        transform: none;
         color: var(--primary-color);
     }
 }
@@ -369,8 +417,8 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.9rem;
     opacity: 0.8;
-    clear: both;
     width: 100%;
+    grid-column: 1 / -1;
 }
 
 /* ====================================
@@ -390,6 +438,7 @@ footer {
 
     /* Footer */
     .footer-content {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
     }
@@ -404,7 +453,8 @@ footer {
 
     .footer-bottom {
         margin-top: 2rem;
-        padding-top: 2rem;
+        padding: 2rem 0;
+        font-size: 1.1rem;
     }
 }
 
@@ -425,6 +475,7 @@ footer {
 
     .footer-bottom {
         margin-top: 3rem;
-        padding-top: 2rem;
+        padding: 2rem 0;
+        font-size: 1.1rem;
     }
 } 

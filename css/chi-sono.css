@@ -2,7 +2,7 @@
    1. LAYOUT PRINCIPALE
 ==================================== */
 #chi-sono {
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 .about-content {
@@ -17,10 +17,10 @@
 .profile-image {
     position: relative;
     width: 100%;
-    max-width: 250px;
+    max-width: 300px;
     margin: 0 auto;
     aspect-ratio: 1;
-    border-radius: 0;
+    border-radius: 50%;
     overflow: hidden;
     box-shadow: var(--shadow);
     border: 4px solid var(--primary-color);
@@ -45,7 +45,6 @@
     transition: opacity 0.3s ease;
 }
 
-/* Immagine interna */
 .profile-image img {
     width: 100%;
     height: 100%;
@@ -68,36 +67,29 @@
 }
 
 /* ====================================
-   3. SEZIONE TESTO
+   3. CONTENUTO
 ==================================== */
 .about-text {
-    background-color: var(--dark-accent);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
+    color: var(--text-color);
+    line-height: 1.8;
+    opacity: 0.9;
 }
 
-/* Titoli */
 .about-text h3 {
     color: var(--primary-color);
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
 }
 
 .about-text h4 {
     color: var(--white);
-    font-size: 1.2rem;
-    margin: 1.5rem 0 0.8rem;
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--primary-color);
-}
-
-/* Paragrafi */
-.about-text p {
-    color: var(--white);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
+    display: inline-block;
 }
 
 /* ====================================
@@ -107,35 +99,40 @@
     list-style: none;
     padding: 0;
     display: grid;
+    gap: 1rem;
+}
+
+.skills-list li {
+    background-color: var(--secondary-color);
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
     gap: 0.8rem;
 }
 
-/* Singola competenza */
-.skills-list li {
-    background-color: var(--secondary-color);
-    padding: 0.8rem 1rem;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-    transition: transform 0.3s ease;
-}
-
-.skills-list li:hover {
-    transform: translateX(5px);
-    background-color: var(--primary-color);
-}
-
-/* Bullet point personalizzato */
 .skills-list li::before {
-    content: "▹";
-    color: var(--primary-color);
-    font-size: 1.1rem;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--primary-color) 50%, 
+        transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .skills-list li:hover::before {
-    color: var(--white);
+    opacity: 1;
+}
+
+.skills-list li:hover {
+    transform: translateY(-3px);
+    background-color: var(--dark-accent);
 }
 
 /* ====================================
@@ -150,8 +147,23 @@
     margin-bottom: 1rem;
     padding: 1rem;
     background-color: var(--secondary-color);
-    border-radius: 5px;
-    border-left: 3px solid var(--primary-color);
+    box-shadow: 0 0 15px rgba(228, 19, 19, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-list li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--primary-color) 50%, 
+        transparent 100%
+    );
 }
 
 /* ====================================
@@ -161,18 +173,19 @@
     display: inline-block;
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 0.8rem 2rem;
-    border-radius: 5px;
+    padding: 1rem 2rem;
     text-decoration: none;
+    border-radius: 0;
     font-weight: 500;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
 }
 
 .btn:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    background-color: transparent;
+    color: var(--primary-color);
+    transform: translateY(-3px);
 }
 
 /* ====================================
@@ -202,40 +215,20 @@
 ==================================== */
 /* Tablet (768px e superiori) */
 @media (min-width: 768px) {
-    #chi-sono {
-        padding: 1.5rem 0;
-    }
-
-    .about-text {
-        padding: 2rem;
-    }
-
-    .about-text h3 {
-        font-size: 1.6rem;
-    }
-
-    .about-text h4 {
-        font-size: 1.3rem;
-    }
-
-    .about-text p {
-        font-size: 1rem;
-    }
-
     .skills-list {
-        grid-template-columns: repeat(2, 1fr); /* 2 colonne su tablet */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /* Desktop (1024px e superiori) */
 @media (min-width: 1024px) {
     #chi-sono {
-        padding: 2rem 0;
+        padding: 3rem 0;
     }
 
     .about-content {
         grid-template-columns: 300px 1fr;
-        gap: 3rem;
+        gap: 4rem;
         align-items: start;
     }
 
@@ -246,14 +239,10 @@
     }
 
     .skills-list {
-        grid-template-columns: repeat(3, 1fr); /* 3 colonne su desktop */
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .about-text h3 {
-        font-size: 1.8rem;
-    }
-
-    .about-text h4 {
-        font-size: 1.4rem;
+    .about-text {
+        padding: 3rem;
     }
 } 

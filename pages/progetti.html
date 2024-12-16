@@ -16,47 +16,51 @@
     <div id="header-container"></div>
 
     <main class="container">
-        <section id="progetti">
-            <h2 class="section-title">I Miei Progetti</h2>
-            
-            <!-- =============================================
-                 PROGETTI IN EVIDENZA
-                 Dimensioni immagini: 800x400px
-                 Aspect ratio: 2:1
-            ============================================= -->
+        <section class="section-progetti">
+            <div class="section-header box-styled box-styled-padded">
+                <h2>I Miei Progetti</h2>
+                <p>Esplora alcuni dei progetti che ho realizzato, dalle applicazioni web ai siti responsive.</p>
+            </div>
+
             <div class="progetti-in-evidenza">
-                <!-- Ultimo Progetto in Corso -->
-                <article class="progetto-grande" id="ultimo-in-corso">
-                    <div class="status-badge in-progress">
-                        <i class="fas fa-code-branch"></i> In Sviluppo
+                <h3 class="section-subtitle">Progetti in Evidenza</h3>
+                
+                <!-- Progetto in Evidenza 1 -->
+                <article class="progetto-grande box-styled box-styled-bordered">
+                    <div class="progetto-image">
+                        <div class="status-badge in-progress">
+                            <i class="fas fa-code-branch"></i> In Sviluppo
+                        </div>
+                        <img src="../images/project-images/Clock800x400.png" 
+                             alt="Clock"
+                             width="800"
+                             height="400">
                     </div>
-                    <!-- Immagine Grande: 800x400px -->
-                    <img src="../images/project-images/Clock800x400.png" 
-                         alt="Clock"
-                         width="800"
-                         height="400">
                     <div class="progetto-content">
                         <h3>Orologio</h3>
-                        <p>Sviluppo di un Orologio con data e ora </p>
+                        <p>Sviluppo di un Orologio con data e ora</p>
                         <div class="tech-stack">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
-                        <a href="https://thegvr3.github.io/Clock/" class="project-link">Vedi Progetto</a>
+                        <a href="https://thegvr3.github.io/Clock/" class="project-link">
+                            Vedi Progetto <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </article>
-                
-                <!-- Ultimo Progetto Completato -->
-                <article class="progetto-grande" id="ultimo-completato">
-                    <div class="status-badge completed">
-                        <i class="fas fa-check-circle"></i> Completato
+
+                <!-- Progetto in Evidenza 2 -->
+                <article class="progetto-grande box-styled box-styled-bordered">
+                    <div class="progetto-image">
+                        <div class="status-badge completed">
+                            <i class="fas fa-check-circle"></i> Completato
+                        </div>
+                        <img src="../images/project-images/battery_level800x400.jpg" 
+                             alt="Battery level reader"
+                             width="800"
+                             height="400">
                     </div>
-                    <!-- Immagine Grande: 800x400px -->
-                    <img src="../images/project-images/battery_level800x400.jpg" 
-                         alt="Battery level reader"
-                         width="800"
-                         height="400">
                     <div class="progetto-content">
                         <h3>Battery Reader</h3>
                         <p>App mobile per il tracciamento della carica della batteria.</p>
@@ -65,104 +69,87 @@
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
-                        <a href="https://thegvr3.github.io/Battery_Reader/" class="project-link">Vedi Progetto</a>
+                        <a href="https://thegvr3.github.io/Battery_Reader/" class="project-link">
+                            Vedi Progetto <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </article>
             </div>
-            
-            <!-- =============================================
-                 GRIGLIA PROGETTI
-                 Dimensioni immagini: 400x200px
-                 Aspect ratio: 2:1
-            ============================================= -->
-            <h3 class="sub-section-title">Archivio Progetti</h3>
+
             <div class="progetti-grid">
                 <!-- Progetto 1 -->
-                <article class="progetto">
-                    <div class="status-badge completed">
-                        <i class="fas fa-check-circle"></i> Completato
+                <article class="progetto box-styled box-styled-hover">
+                    <div class="progetto-image">
+                        <div class="status-badge completed">
+                            <i class="fas fa-check-circle"></i> Completato
+                        </div>
+                        <img src="../images/project-images/qr400x200.jpg" 
+                             alt="Qr Code Generator"
+                             width="400"
+                             height="200">
                     </div>
-                    <!-- Immagine Card: 400x200px -->
-                    <img src="../images/project-images/qr400x200.jpg" 
-                         alt="Qr Code Generator"
-                         width="400"
-                         height="200">
                     <div class="progetto-content">
-                        <h4>Qr Code Generator</h4>
+                        <h3>Qr Code Generator</h3>
                         <p>Piccolo generatore di Qr Code</p>
                         <div class="tech-stack">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
-                        <a href="https://thegvr3.github.io/QR-Generator/" class="project-link">Vedi Progetto</a>
+                        <a href="https://thegvr3.github.io/QR-Generator/" class="project-link">
+                            Vedi Progetto <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </article>
 
                 <!-- Progetto 2 -->
-                <article class="progetto">
-                    <div class="status-badge completed">
-                        <i class="fas fa-check-circle"></i> Completato
+                <article class="progetto box-styled box-styled-hover">
+                    <div class="progetto-image">
+                        <div class="status-badge completed">
+                            <i class="fas fa-check-circle"></i> Completato
+                        </div>
+                        <img src="../images/project-images/pixel400x200.jpg" 
+                             alt="Pixel Table Generator"
+                             width="400"
+                             height="200">
                     </div>
-                    <!-- Immagine Card: 400x200px -->
-                    <img src="../images/project-images/" 
-                         alt="Pixel Table Generator"
-                         width="400"
-                         height="200">
                     <div class="progetto-content">
-                        <h4>Pixel Table Generator</h4>
+                        <h3>Pixel Table Generator</h3>
                         <p>Tavoletta da disegno pixel art</p>
                         <div class="tech-stack">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
-                        <a href="https://thegvr3.github.io/Pixel_Table_Generator/" class="project-link">Vedi Progetto</a>
+                        <a href="https://thegvr3.github.io/Pixel_Table_Generator/" class="project-link">
+                            Vedi Progetto <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </article>
 
                 <!-- Progetto 3 -->
-                <article class="progetto">
-                    <div class="status-badge in-progress">
-                        <i class="fas fa-code-branch"></i> In Sviluppo
+                <article class="progetto box-styled box-styled-hover">
+                    <div class="progetto-image">
+                        <div class="status-badge in-progress">
+                            <i class="fas fa-code-branch"></i> In Sviluppo
+                        </div>
+                        <img src="../images/project-images/meteo400x200.jpg" 
+                             alt="Weather App"
+                             width="400"
+                             height="200">
                     </div>
-                    <!-- Immagine Card: 400x200px -->
-                    <img src="../images/project-images/meteo400x200.jpg" 
-                         alt="Weather App"
-                         width="400"
-                         height="200">
                     <div class="progetto-content">
-                        <h4>Weather App</h4>
+                        <h3>Weather App</h3>
                         <p>Applicazione per il controllo delle previsioni del tempo</p>
                         <div class="tech-stack">
                             <span>Socket.io</span>
                             <span>Express</span>
                         </div>
-                        <a href="https://github.com/TheGvR3/Weather_App" class="project-link">Dettagli Progetto</a>
+                        <a href="https://github.com/TheGvR3/Weather_App" class="project-link">
+                            Dettagli Progetto <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </article>
-
-                <!-- Template per nuovo progetto (copiare questo blocco)
-                <article class="progetto">
-                    <div class="status-badge completed">
-                        <i class="fas fa-check-circle"></i> Completato
-                    </div>
-                    [Inserisci immagine 400x200px qui]
-                    <img src="percorso/immagine.jpg" 
-                         alt="Nome Progetto"
-                         width="400"
-                         height="200">
-                    <div class="progetto-content">
-                        <h4>Nome Progetto</h4>
-                        <p>Descrizione breve del progetto.</p>
-                        <div class="tech-stack">
-                            <span>Tecnologia 1</span>
-                            <span>Tecnologia 2</span>
-                        </div>
-                        <a href="#" class="project-link">Vedi Progetto</a>
-                    </div>
-                </article>
-                -->
             </div>
         </section>
     </main>
