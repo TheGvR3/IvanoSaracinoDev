@@ -117,3 +117,28 @@ function initThemeToggle() {
         });
     }
 } 
+
+/* ====================================
+  5. Invio email
+==================================== */
+
+function sendEmail(event) {
+    event.preventDefault(); // Evita il refresh della pagina
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const recipient = "ivanosaracinodev@gmail.com";
+
+    if (!email.includes("@")) {
+        alert("Inserire un indirizzo email valido.");
+        document.getElementById("email").focus();
+        return;
+    }
+    if (name === "" || message === "") {
+        alert("Compila tutti i campi richiesti.");
+        return;
+    }
+    const mailtoLink = `mailto:${recipient}?subject=Messaggio da ${encodeURIComponent(name)} (${encodeURIComponent(email)})&body=${encodeURIComponent(message)}`;
+    window.location.href = mailtoLink;
+}
