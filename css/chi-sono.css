@@ -169,6 +169,11 @@
 /* ====================================
    6. PULSANTE CONTATTO
 ==================================== */
+.whoIAm-btn{
+    margin: 0;
+}
+
+
 .btn {
     display: inline-block;
     background-color: var(--primary-color);
@@ -218,6 +223,12 @@
     .skills-list {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .whoIAm-btn{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
 }
 
 /* Desktop (1024px e superiori) */
