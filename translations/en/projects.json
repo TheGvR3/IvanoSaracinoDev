@@ -1,0 +1,37 @@
+{
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Explore some of the projects I've created, from web applications to responsive websites.",
+    "featured": {
+      "title": "Featured Projects",
+      "clock": {
+        "title": "Clock",
+        "description": "Development of a digital clock showing time and date. Time zone support and a chronometer/timer functionality will be implemented soon."
+      },
+      "battery": {
+        "title": "Battery Reader",
+        "description": "Android app that allows you to monitor battery charge and see if the device is charging. Provides useful information to optimize battery usage."
+      },
+      "pixel": {
+        "title": "Pixel Table Generator",
+        "description": "Creation of a tablet for drawing pixel art. Optimized for PC use, it allows you to create pixelated works in a simple and fun way."
+      },
+      "qr": {
+        "title": "QR Code Generator",
+        "description": "QR Code generator that allows you to create custom codes, with the ability to choose colors to suit your needs."
+      },
+      "weather": {
+        "title": "Weather App",
+        "description": "Real-time weather application that uses an external API to show weather forecasts and continuous updates. Still in development."
+      }
+    },
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In Development"
+    },
+    "buttons": {
+      "viewProject": "View Project",
+      "projectDetails": "Project Details"
+    }
+  }
+} 

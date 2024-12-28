@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "theme": "Night Mode"
+  },
+  "header": {
+    "name": "Ivano Saracino",
+    "role": "Full Stack Developer"
+  },
+  "footer": {
+    "about": {
+      "title": "About Me",
+      "description": "I am a passionate web developer with experience in various technologies and frameworks. My mission is to create innovative, user-friendly and performant web solutions."
+    },
+    "quickLinks": {
+      "title": "Quick Links"
+    },
+    "contact": {
+      "title": "Contact Me",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Brindisi, Italy"
+    },
+    "social": {
+      "title": "Social"
+    },
+    "copyright": "© 2024 Ivano Saracino. All rights reserved."
+  }
+} 

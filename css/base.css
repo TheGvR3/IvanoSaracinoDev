@@ -88,6 +88,12 @@ img {
     position: relative; /* Per mantenere il contenuto sopra l'overlay */
 }
 
+@media (min-width: 768px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
 /* ====================================
    5. TIPOGRAFIA
 ==================================== */

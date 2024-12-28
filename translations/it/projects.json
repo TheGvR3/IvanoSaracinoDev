@@ -1,0 +1,37 @@
+{
+  "projects": {
+    "title": "I Miei Progetti",
+    "subtitle": "Esplora alcuni dei progetti che ho realizzato, dalle applicazioni web ai siti responsive.",
+    "featured": {
+      "title": "Progetti in Evidenza",
+      "clock": {
+        "title": "Orologio",
+        "description": "Sviluppo di un orologio digitale che mostra l'ora e la data. Presto sarà implementato il supporto per fusi orari e una funzionalità di cronometro/timer."
+      },
+      "battery": {
+        "title": "Battery Reader",
+        "description": "App Android che permette di monitorare la carica della batteria e di vedere se il dispositivo è in carica. Fornisce informazioni utili per ottimizzare l'uso della batteria."
+      },
+      "pixel": {
+        "title": "Pixel Table Generator",
+        "description": "Creazione di una tavoletta per disegnare pixel art. Ottimizzata per l'uso su PC, permette di creare opere pixelate in modo semplice e divertente."
+      },
+      "qr": {
+        "title": "QR Code Generator",
+        "description": "Generatore di QR Code che permette di creare codici personalizzati, con la possibilità di scegliere il colore per adattarsi alle proprie esigenze."
+      },
+      "weather": {
+        "title": "Weather App",
+        "description": "Applicazione meteo in tempo reale, che utilizza un'API esterna per mostrare le previsioni del tempo e aggiornamenti continui. Ancora in sviluppo."
+      }
+    },
+    "status": {
+      "completed": "Completato",
+      "inProgress": "In Sviluppo"
+    },
+    "buttons": {
+      "viewProject": "Vedi Progetto",
+      "projectDetails": "Dettagli Progetto"
+    }
+  }
+} 

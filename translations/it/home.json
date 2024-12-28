@@ -1,0 +1,39 @@
+{
+  "home": {
+    "welcome": "Benvenuto",
+    "subtitle": "Sviluppatore Full Stack",
+    "description": "In questo spazio troverai alcuni dei miei progetti più interessanti e avrai modo di scoprire di più su di me. Dai un'occhiata alle varie sezioni per esplorare le mie competenze e il lavoro che faccio.",
+    "enterSite": "Entra nel sito",
+    "skills": {
+      "title": "Le Mie Competenze",
+      "learnMore": "Scopri di più"
+    },
+    "carousel": {
+      "clock": {
+        "title": "Clock",
+        "description": "Orologio digitale che mostra l'ora e la data."
+      },
+      "battery": {
+        "title": "Battery Reader",
+        "description": "App Android che permette di monitorare la carica della batteria."
+      },
+      "qr": {
+        "title": "QR Code Generator",
+        "description": "Generatore di QR Code che permette di creare codici personalizzati"
+      }
+    },
+    "testimonials": {
+      "title": "Cosa Posso Offrire",
+      "intro": "Offro soluzioni su misura per soddisfare le esigenze tecnologiche di aziende e privati, tra cui:",
+      "services": {
+        "webDev": "Sviluppo Web: Creo siti e applicazioni web moderni, responsive e ottimizzati per ogni dispositivo.",
+        "database": "Gestione Database: Progetto, ottimizzo e gestisco database MySQL per performance elevate e sicurezza.",
+        "api": "Integrazione API: Implemento integrazioni tra sistemi per migliorare efficienza e automazione.",
+        "maintenance": "Manutenzione e Aggiornamenti: Fornisco supporto continuo per aggiornamenti, risoluzione di bug e miglioramenti.",
+        "custom": "Soluzioni su Misura: Sviluppo software personalizzati utilizzando tecnologie come Java, Spring Boot, PHP e JavaScript.",
+        "consulting": "Consulenza Tecnologica: Guida nella scelta delle migliori tecnologie e strategie digitali per i tuoi progetti."
+      },
+      "conclusion": "Ogni servizio è pensato per offrire qualità, affidabilità e risultati concreti."
+    }
+  }
+} 

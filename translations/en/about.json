@@ -1,0 +1,48 @@
+{
+  "about": {
+    "title": "About Me",
+    "intro": {
+      "greeting": "Hi, I'm Ivano Saracino",
+      "description": "I'm a passionate web developer with experience in various technologies and frameworks. My mission is to create innovative, user-friendly and high-performance web solutions."
+    },
+    "education": {
+      "title": "My Education",
+      "description": "I completed my training at Apulia Digital Maker, where I studied technologies such as PHP, Java, Java EE, Spring Boot, microservices, MySQL, and front-end development with JavaScript, HTML and CSS. During the course, I gained skills in:"
+    },
+    "skills": {
+      "title": "My Main Skills",
+      "list": {
+        "cordova": "Cross-platform application development with Apache Cordova",
+        "uml": "UML methodologies for software modeling",
+        "agile": "Project management with focus on agile management",
+        "crm": "CRM and business automation with Salesforce",
+        "soft": "Soft skills such as problem-solving and teamwork",
+        "microservices": "Web application development with microservices architecture"
+      },
+      "mainSkills": {
+        "frontend": "Front-end development with HTML5, CSS3 and JavaScript",
+        "backend": "Back-end programming with PHP and Java",
+        "spring": "Web application development with Spring Boot and microservices",
+        "cordova": "Cross-platform application development with Apache Cordova",
+        "database": "MySQL database management",
+        "git": "Use of Git version control systems"
+      }
+    },
+    "experience": {
+      "title": "Work Experience",
+      "list": {
+        "teamwork": "Team collaboration on full-stack web projects, with particular attention to backend and service integration.",
+        "projects": "Participation in practical project work during the training course, developing scalable and high-performance solutions.",
+        "mobile": "Design and development of cross-platform applications with Apache Cordova for mobile devices."
+      }
+    },
+    "interests": {
+      "title": "Personal Interests",
+      "description": "When I'm not in front of the computer, I like to discover new technologies, read books about personal growth and work on projects that I'm passionate about. I'm also a big F1 and motorsport fan in general, and curiosity leads me to experiment and always learn something new."
+    },
+    "buttons": {
+      "contact": "Contact Me",
+      "cv": "Download CV"
+    }
+  }
+} 

@@ -6,8 +6,8 @@
                 <img src="../images/logo.png" alt="Logo [Tuo Nome]">
             </div>
             <div class="header-text">
-                <h1>Ivano Saracino</h1>
-                <p>Sviluppatore Full Stack</p>
+                <h1 data-i18n="header.name">Ivano Saracino</h1>
+                <p data-i18n="header.role">Sviluppatore Full Stack</p>
             </div>
         </div>
         <button class="hamburger" type="button" aria-label="Menu">☰</button>
@@ -17,14 +17,20 @@
 <!-- Mobile Navigation (spostato fuori dal container) -->
 <nav class="mobile-nav">
     <ul>
-        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="progetti.html"><i class="fas fa-code"></i> Progetti</a></li>
-        <li><a href="chi-sono.html"><i class="fas fa-user"></i> Chi Sono</a></li>
-        <li><a href="contatti.html"><i class="fas fa-envelope"></i> Contatti</a></li>
+        <li><a href="home.html"><i class="fas fa-home"></i> <span data-i18n="nav.home">Home</span></a></li>
+        <li><a href="progetti.html"><i class="fas fa-code"></i> <span data-i18n="nav.projects">Progetti</span></a></li>
+        <li><a href="chi-sono.html"><i class="fas fa-user"></i> <span data-i18n="nav.about">Chi Sono</span></a></li>
+        <li><a href="contatti.html"><i class="fas fa-envelope"></i> <span data-i18n="nav.contact">Contatti</span></a></li>
         <li>
             <button id="theme-toggle-mobile" class="theme-toggle" type="button" aria-label="Cambia tema">
                 <i class="fas fa-moon"></i>
-                <span class="theme-text">Night Mode</span>
+                <span class="theme-text" data-i18n="nav.theme">Night Mode</span>
+            </button>
+        </li>
+        <li>
+            <button class="lang-toggle" type="button" aria-label="Cambia lingua">
+                <i class="fas fa-it"></i>
+                <span class="lang-text">English</span>
             </button>
         </li>
     </ul>
@@ -34,14 +40,20 @@
 <nav class="desktop-nav">
     <div class="container">
         <ul class="nav-links">
-            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="progetti.html"><i class="fas fa-code"></i> Progetti</a></li>
-            <li><a href="chi-sono.html"><i class="fas fa-user"></i> Chi Sono</a></li>
-            <li><a href="contatti.html"><i class="fas fa-envelope"></i> Contatti</a></li>
+            <li><a href="home.html"><i class="fas fa-home"></i> <span data-i18n="nav.home">Home</span></a></li>
+            <li><a href="progetti.html"><i class="fas fa-code"></i> <span data-i18n="nav.projects">Progetti</span></a></li>
+            <li><a href="chi-sono.html"><i class="fas fa-user"></i> <span data-i18n="nav.about">Chi Sono</span></a></li>
+            <li><a href="contatti.html"><i class="fas fa-envelope"></i> <span data-i18n="nav.contact">Contatti</span></a></li>
         </ul>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambia tema">
-            <i class="fas fa-moon"></i>
-            <span class="theme-text">Night Mode</span>
-        </button>
+        <div class="nav-controls">
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambia tema">
+                <i class="fas fa-moon"></i>
+                <span class="theme-text" data-i18n="nav.theme">Night Mode</span>
+            </button>
+            <button class="lang-toggle" type="button" aria-label="Cambia lingua">
+                <i class="fas fa-it"></i>
+                <span class="lang-text">English</span>
+            </button>
+        </div>
     </div>
 </nav>

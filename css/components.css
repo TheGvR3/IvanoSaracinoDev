@@ -110,7 +110,6 @@ header p {
     transition: all 0.3s ease;
     width: 100%;
     max-width: 300px;
-    text-align: center;
 }
 
 .mobile-nav ul.show li {
@@ -132,19 +131,20 @@ header p {
     padding: 1.2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
     background-color: var(--dark-accent);
     border-left: 4px solid var(--primary-color);
     transition: all 0.3s ease;
     width: 100%;
     border-radius: 0;
+    padding-left: 3rem;
 }
 
 .mobile-nav ul li a i {
     color: var(--primary-color);
     font-size: 1.3rem;
-    min-width: 25px;
+    min-width: 20px;
+    text-align: center;
 }
 
 .mobile-nav ul li a:hover {
@@ -165,6 +165,9 @@ header p {
     width: 100%;
     max-width: 300px;
     margin-top: 3rem;
+    justify-content: center;
+    padding-left: 2rem;
+    align-items: center;
 }
 
 .mobile-nav ul li .theme-toggle:hover {
@@ -198,6 +201,12 @@ header p {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .nav-controls {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
     }
 
     .nav-links {
@@ -240,6 +249,50 @@ header p {
         border-bottom: 3px solid var(--primary-color);
         transform: none;
         color: var(--primary-color);
+    }
+
+    /* Stile per il toggle lingua desktop */
+    .desktop-nav .lang-toggle {
+        padding: 0.8rem 1.2rem;
+        border-radius: 0;
+        background-color: var(--dark-accent);
+        border-bottom: 3px solid transparent;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .desktop-nav .lang-toggle .lang-text {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .desktop-nav .lang-toggle:hover {
+        border-bottom: 3px solid var(--primary-color);
+        transform: none;
+    }
+
+    .desktop-nav .lang-toggle:hover .lang-text,
+    .desktop-nav .lang-toggle:hover i {
+        color: var(--primary-color);
+    }
+
+    .desktop-nav .nav-controls {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    /* Separatore tra i pulsanti */
+    .desktop-nav .nav-controls .theme-toggle::after {
+        content: '';
+        position: absolute;
+        right: -0.25rem;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 20px;
+        width: 1px;
+        background-color: var(--light-accent);
     }
 }
 
@@ -478,4 +531,52 @@ footer {
         padding: 2rem 0;
         font-size: 1.1rem;
     }
+}
+
+/* Stile per il toggle lingua */
+.lang-toggle {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lang-toggle .lang-text {
+    color: var(--white);
+}
+
+.lang-toggle:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Versione mobile */
+.mobile-nav .lang-toggle {
+    width: 80%;
+    max-width: 200px;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* Stile per il toggle lingua mobile */
+.mobile-nav ul li .lang-toggle {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    border-left: none;
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+    padding-left: 2rem;
+    align-items: center;
 } 

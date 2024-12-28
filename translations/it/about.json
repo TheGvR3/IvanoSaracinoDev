@@ -1,0 +1,48 @@
+{
+  "about": {
+    "title": "Chi Sono",
+    "intro": {
+      "greeting": "Ciao, sono Ivano Saracino",
+      "description": "Sono uno sviluppatore web appassionato con esperienza in diverse tecnologie e framework. La mia missione è creare soluzioni web innovative, user-friendly e performanti."
+    },
+    "education": {
+      "title": "La mia formazione",
+      "description": "Ho completato il mio percorso presso Apulia Digital Maker, dove ho approfondito tecnologie come PHP, Java, Java EE, Spring Boot, microservizi, MySQL, e sviluppo front-end con JavaScript, HTML e CSS. Durante il percorso, ho acquisito competenze su:"
+    },
+    "skills": {
+      "title": "Le mie competenze principali",
+      "list": {
+        "cordova": "Sviluppo di applicazioni cross-platform con Apache Cordova",
+        "uml": "Metodologie UML per modellazione del software",
+        "agile": "Project management con focus su gestione agile",
+        "crm": "CRM e automazione aziendale con Salesforce",
+        "soft": "Soft skills come problem-solving e lavoro in team",
+        "microservices": "Sviluppo di applicazioni web con architettura a microservizi"
+      },
+      "mainSkills": {
+        "frontend": "Sviluppo front-end con HTML5, CSS3 e JavaScript",
+        "backend": "Programmazione back-end con PHP e Java",
+        "spring": "Sviluppo di applicazioni web con Spring Boot e microservizi",
+        "cordova": "Sviluppo di applicazioni cross-platform con Apache Cordova",
+        "database": "Gestione di database MySQL",
+        "git": "Utilizzo di sistemi di controllo versione Git"
+      }
+    },
+    "experience": {
+      "title": "Esperienze lavorative",
+      "list": {
+        "teamwork": "Collaborazione in team su progetti web full-stack, con particolare attenzione al backend e all'integrazione di servizi.",
+        "projects": "Partecipazione a project work pratici durante il percorso di formazione, sviluppando soluzioni scalabili e performanti.",
+        "mobile": "Progettazione e sviluppo di applicazioni cross-platform con Apache Cordova per dispositivi mobili."
+      }
+    },
+    "interests": {
+      "title": "Interessi personali",
+      "description": "Quando non sono davanti al computer, mi piace scoprire nuove tecnologie, leggere libri che parlano di crescita personale e lavorare su progetti che mi appassionano. Sono anche un grande appassionato di F1 e motorsport in generale, e la curiosità mi porta a sperimentare e imparare sempre qualcosa di nuovo."
+    },
+    "buttons": {
+      "contact": "Contattami",
+      "cv": "Scarica CV"
+    }
+  }
+} 

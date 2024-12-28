@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Chi Sono",
+    "projects": "Progetti",
+    "contact": "Contatti",
+    "theme": "Night Mode"
+  },
+  "header": {
+    "name": "Ivano Saracino",
+    "role": "Sviluppatore Full Stack"
+  },
+  "footer": {
+    "about": {
+      "title": "Chi Sono",
+      "description": "Sono uno sviluppatore web appassionato, con esperienza in diverse tecnologie e framework. La mia missione è creare soluzioni web innovative, user-friendly e performanti."
+    },
+    "quickLinks": {
+      "title": "Link rapidi"
+    },
+    "contact": {
+      "title": "Contattami",
+      "email": "Email",
+      "phone": "Telefono",
+      "location": "Brindisi, Italia"
+    },
+    "social": {
+      "title": "Social"
+    },
+    "copyright": "© 2024 Ivano Saracino. Tutti i diritti riservati."
+  }
+} 

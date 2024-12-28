@@ -27,9 +27,9 @@
     <main class="container">
         <div class="hero-section">
             <section id="home" class="welcome-block">
-                <div class="welcome-section">
-                    <h2 class="section-title">Benvenuto nel mio Portfolio</h2>
-                    <p class="welcome-text">In questo spazio troverai alcuni dei miei progetti più interessanti e avrai
+                <div class="welcome-section box-styled box-styled-padded">
+                    <h2 class="section-title" data-i18n="home.welcome">Benvenuto</h2>
+                    <p class="welcome-text" data-i18n="home.description">In questo spazio troverai alcuni dei miei progetti più interessanti e avrai
                         modo di scoprire di più su di me. Dai un'occhiata alle varie sezioni per esplorare le mie
                         competenze e il lavoro che faccio.</p>
                 </div>
@@ -43,24 +43,24 @@
                         <div class="carousel-item active" data-index="0">
                             <img src="../images/project-images/Clock400x200.png" alt="Clock Project">
                             <div class="carousel-caption">
-                                <h4>Clock</h4>
-                                <p>Orologio digitale che mostra l'ora e la data.</p>
+                                <h4 data-i18n="home.carousel.clock.title">Clock</h4>
+                                <p data-i18n="home.carousel.clock.description">Orologio digitale che mostra l'ora e la data.</p>
                                 <a href="progetti.html" class="btn">Scopri di più</a>
                             </div>
                         </div>
                         <div class="carousel-item" data-index="1">
                             <img src="../images/project-images/battery_level800x400.jpg" alt="Progetto 2">
                             <div class="carousel-caption">
-                                <h4>Battery Reader</h4>
-                                <p>App Android che permette di monitorare la carica della batteria.</p>
+                                <h4 data-i18n="home.carousel.battery.title">Battery Reader</h4>
+                                <p data-i18n="home.carousel.battery.description">App Android che permette di monitorare la carica della batteria.</p>
                                 <a href="progetti.html" class="btn">Scopri di più</a>
                             </div>
                         </div>
                         <div class="carousel-item" data-index="2">
                             <img src="../images/project-images/qr400x200.jpg" alt="Progetto 3">
                             <div class="carousel-caption">
-                                <h4>QR Code Generator</h4>
-                                <p>Generatore di QR Code che permette di creare codici personalizzati</p>
+                                <h4 data-i18n="home.carousel.qr.title">QR Code Generator</h4>
+                                <p data-i18n="home.carousel.qr.description">Generatore di QR Code che permette di creare codici personalizzati</p>
                                 <a href="progetti.html" class="btn">Scopri di più</a>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
         </div>
 
         <section id="competenze">
-            <h3>Le Mie Competenze</h3>
+            <h3 data-i18n="home.skills.title">Le Mie Competenze</h3>
             <div class="skills-grid">
                 <a href="https://html.spec.whatwg.org/">
                     <div class="skill-item parallelogram">
@@ -127,23 +127,17 @@
         </section>
 
         <section id="testimonianze">
-            <h3>Cosa Posso Offrire</h3>
+            <h3 data-i18n="home.testimonials.title">Cosa Posso Offrire</h3>
             <div class="testimonial">
                 <p>
-                    Offro soluzioni su misura per soddisfare le esigenze tecnologiche di aziende e privati, tra cui:<br>
-                    <strong>Sviluppo Web:</strong> Creo siti e applicazioni web moderni, responsive e ottimizzati per
-                    ogni dispositivo.<br>
-                    <strong>Gestione Database:</strong> Progetto, ottimizzo e gestisco database MySQL per performance
-                    elevate e sicurezza.<br>
-                    <strong>Integrazione API:</strong> Implemento integrazioni tra sistemi per migliorare efficienza e
-                    automazione.<br>
-                    <strong>Manutenzione e Aggiornamenti:</strong> Fornisco supporto continuo per aggiornamenti,
-                    risoluzione di bug e miglioramenti.<br>
-                    <strong>Soluzioni su Misura:</strong> Sviluppo software personalizzati utilizzando tecnologie come
-                    Java, Spring Boot, PHP e JavaScript.<br>
-                    <strong>Consulenza Tecnologica:</strong> Guida nella scelta delle migliori tecnologie e strategie
-                    digitali per i tuoi progetti.<br>
-                    Ogni servizio è pensato per offrire qualità, affidabilità e risultati concreti.
+                    <span data-i18n="home.testimonials.intro">Offro soluzioni su misura per soddisfare le esigenze tecnologiche di aziende e privati, tra cui:</span><br>
+                    <strong data-i18n="home.testimonials.services.webDev">Sviluppo Web: Creo siti e applicazioni web moderni, responsive e ottimizzati per ogni dispositivo.</strong><br>
+                    <strong data-i18n="home.testimonials.services.database">Gestione Database: Progetto, ottimizzo e gestisco database MySQL per performance elevate e sicurezza.</strong><br>
+                    <strong data-i18n="home.testimonials.services.api">Integrazione API: Implemento integrazioni tra sistemi per migliorare efficienza e automazione.</strong><br>
+                    <strong data-i18n="home.testimonials.services.maintenance">Manutenzione e Aggiornamenti: Fornisco supporto continuo per aggiornamenti, risoluzione di bug e miglioramenti.</strong><br>
+                    <strong data-i18n="home.testimonials.services.custom">Soluzioni su Misura: Sviluppo software personalizzati utilizzando tecnologie come Java, Spring Boot, PHP e JavaScript.</strong><br>
+                    <strong data-i18n="home.testimonials.services.consulting">Consulenza Tecnologica: Guida nella scelta delle migliori tecnologie e strategie digitali per i tuoi progetti.</strong><br>
+                    <span data-i18n="home.testimonials.conclusion">Ogni servizio è pensato per offrire qualità, affidabilità e risultati concreti.</span>
                 </p>
             </div>
         </section>
@@ -159,9 +153,12 @@
         </div>
     </footer>
 
+    <!-- Carica prima il sistema di traduzione -->
+    <script src="../js/translations.js"></script>
+    <!-- Poi carica gli altri script -->
     <script src="../js/componentsLoader.js"></script>
-    <script src="../js/carousel.js"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/carousel.js"></script>
 </body>
 
 </html>

@@ -1,21 +1,3 @@
-class ComponentLoader {
-    static async loadComponent(elementId, componentPath) {
-        try {
-            const response = await fetch(componentPath);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            const content = await response.text();
-            document.getElementById(elementId).innerHTML = content;
-            
-            // Inizializza il menu hamburger dopo che l'header è stato caricato
-            if (elementId === 'header-container') {
-                initializeHamburgerMenu();
-            }
-        } catch (error) {
-            console.error('Error loading component', error);
-        }
-    }
-}
-
 function initializeHamburgerMenu() {
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-nav ul');
@@ -68,10 +50,36 @@ function initializeHamburgerMenu() {
     }
 }
 
-function loadAllComponents() {
-    ComponentLoader.loadComponent('header-container', '../components/header.html');
-    ComponentLoader.loadComponent('footer-content', '../components/footer.html');
+async function loadComponents() {
+    try {
+        // Carica l'header
+        const headerResponse = await fetch('../components/header.html');
+        const headerContent = await headerResponse.text();
+        document.getElementById('header-container').innerHTML = headerContent;
+
+        // Carica il footer
+        const footerResponse = await fetch('../components/footer.html');
+        const footerContent = await footerResponse.text();
+        document.getElementById('footer-content').innerHTML = footerContent;
+
+        // Inizializza il menu hamburger
+        initializeHamburgerMenu();
+
+        // Aggiorna le traduzioni dopo il caricamento dei componenti
+        if (window.translationManager) {
+            window.translationManager.updatePageContent();
+            // Riattacca i listener dopo il caricamento dei componenti
+            window.translationManager.setupLanguageToggle();
+        } else {
+            console.error('TranslationManager not found');
+        }
+
+    } catch (error) {
+        console.error('Error loading components:', error);
+    }
 }
 
 // Carica i componenti quando il DOM è pronto
-document.addEventListener('DOMContentLoaded', loadAllComponents);
+document.addEventListener('DOMContentLoaded', () => {
+    loadComponents();
+});

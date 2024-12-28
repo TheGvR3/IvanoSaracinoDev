@@ -1,0 +1,18 @@
+{
+  "contact": {
+    "title": "Contattami",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Messaggio",
+    "send": "Invia",
+    "info": {
+      "title": "Informazioni di contatto",
+      "email": "Email",
+      "phone": "Telefono",
+      "address": "Indirizzo: Via Example 123, Brindisi, Italia"
+    },
+    "map": {
+      "title": "Dove trovarmi"
+    }
+  }
+} 

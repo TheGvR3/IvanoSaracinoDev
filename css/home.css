@@ -186,9 +186,14 @@ main {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 1.5rem;
-    padding-bottom: 4rem; /* Spazio aggiuntivo per i controlli */
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 2rem;
+    padding-bottom: 4.5rem; /* Spazio aggiuntivo per i controlli */
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 0, 0, 0.85) 30%,
+        rgba(0, 0, 0, 0.95) 100%
+    );
     color: var(--white);
     z-index: 1;
 }
@@ -196,22 +201,37 @@ main {
 .carousel-caption h4 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
 }
 
 .carousel-caption .btn {
     display: inline-block;
-    background-color: rgba(228, 19, 19, 0.1);
+    background-color: var(--primary-color);
     color: var(--white);
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0;
+    border: 2px solid var(--primary-color);
     margin-top: 0.5rem;
     transition: all 0.3s ease;
+    font-weight: 500;
+    text-shadow: none;
 }
 
 .carousel-caption .btn:hover {
-    background-color: var(--primary-color);
+    background-color: transparent;
+    color: var(--white);
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(228, 19, 19, 0.2);
 }
 
 /* Controlli carousel */
@@ -225,12 +245,17 @@ main {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    z-index: 2; /* Assicura che i controlli siano sopra altri elementi */
+    z-index: 2;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.5) 0%,
+        transparent 100%
+    );
 }
 
 /* Pulsanti prev/next */
 .carousel-control {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(228, 19, 19, 0.2);
     border: none;
     color: var(--white);
     width: 40px;
@@ -241,10 +266,12 @@ main {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    border: 1px solid rgba(228, 19, 19, 0.3);
 }
 
 .carousel-control:hover {
     background: var(--primary-color);
+    transform: scale(1.1);
 }
 
 /* Indicatori slide */
@@ -258,14 +285,16 @@ main {
     height: 10px;
     border-radius: 50%;
     border: none;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.3);
     cursor: pointer;
     transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .indicator.active {
     background: var(--primary-color);
     transform: scale(1.2);
+    border-color: var(--primary-color);
 }
 
 /* ====================================
@@ -335,7 +364,7 @@ cite {
 
     .welcome-block, 
     .carousel-block {
-        order: 0; /* Ripristina l'ordine naturale su desktop */
+        order: 0;
     }
 
     .welcome-section {
@@ -345,18 +374,32 @@ cite {
     .carousel {
         height: 100%;
         margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel-inner {
+        flex: 1;
+        height: auto;
+    }
+
+    .carousel-item {
+        height: 100%;
     }
 
     .carousel-item img {
-        height: 400px;
+        height: 100%;
     }
 
     .carousel-caption {
-        padding-bottom: 5rem; /* Più spazio su desktop */
+        padding-bottom: 4.5rem;
+        bottom: 0;
     }
     
     .carousel-controls {
-        bottom: 1rem; /* Posizione leggermente più in basso su desktop */
+        bottom: 0;
+        position: absolute;
+        width: 100%;
     }
 } 
 

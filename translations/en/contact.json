@@ -1,0 +1,18 @@
+{
+  "contact": {
+    "title": "Contact Me",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address: Via Example 123, Brindisi, Italy"
+    },
+    "map": {
+      "title": "Where to Find Me"
+    }
+  }
+} 
