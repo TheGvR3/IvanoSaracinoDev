@@ -23,6 +23,14 @@
       "weather": {
         "title": "Weather App",
         "description": "Applicazione meteo in tempo reale, che utilizza un'API esterna per mostrare le previsioni del tempo e aggiornamenti continui. Ancora in sviluppo."
+      },
+      "rockPaperScissor":{
+        "title": "Rock Paper Scissor",
+        "description": "Piccolo Gioco di Sasso Carta Forbice"
+      },
+      "panari":{
+        "title": "Panari Salentini Website",
+        "description": "Sito Web per la valorizzazione dei Panari Salentini."
       }
     },
     "status": {

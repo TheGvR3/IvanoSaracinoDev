@@ -23,6 +23,14 @@
       "weather": {
         "title": "Weather App",
         "description": "Real-time weather application that uses an external API to show weather forecasts and continuous updates. Still in development."
+      },
+      "rockPaperScissor":{
+        "title": "Rock Paper Scissor",
+        "description": "Game of Rock Paper Scissor"
+      },
+      "panari":{
+        "title": "Panari Salentini Website",
+        "description": "Website for the promotion of Panari Salentini."
       }
     },
     "status": {
