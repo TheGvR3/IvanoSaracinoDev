@@ -31,6 +31,10 @@
       "panari":{
         "title": "Panari Salentini Website",
         "description": "Website for the promotion of Panari Salentini."
+      },
+      "snp":{
+        "title": "Selezione Nazionale Piloti Website",
+        "description": "Website for Selezione Nazionale Piloti."
       }
     },
     "status": {
