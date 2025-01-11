@@ -35,6 +35,10 @@
       "snp":{
         "title": "Selezione Nazionale Piloti Website",
         "description": "Website for Selezione Nazionale Piloti."
+      },
+      "AuthAPI":{
+        "title": "Auth API",
+        "description": "Modular and reusable user management and authentication service. Authentication management, user registration, easily integrated into other projects."
       }
     },
     "status": {

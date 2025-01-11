@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Esplora i progetti realizzati da Ivano Saracino, sviluppatore web. Scopri le mie creazioni in HTML, CSS, JavaScript e altro.">
+    <meta name="description"
+        content="Esplora i progetti realizzati da Ivano Saracino, sviluppatore web. Scopri le mie creazioni in HTML, CSS, JavaScript e altro.">
     <meta name="keywords" content="progetti, portfolio, sviluppatore web, HTML, CSS, JavaScript, lavori, creazioni">
     <title>Progetti</title>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap'>    
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/progetti.css">
 </head>
+
 <body>
     <div id="header-container"></div>
 
@@ -19,9 +22,10 @@
         <section class="section-progetti">
             <div class="section-header box-styled box-styled-padded">
                 <h2 data-i18n="projects.title">I Miei Progetti</h2>
-                <p data-i18n="projects.subtitle">Esplora alcuni dei progetti che ho realizzato, dalle applicazioni web ai siti responsive.</p>
+                <p data-i18n="projects.subtitle">Esplora alcuni dei progetti che ho realizzato, dalle applicazioni web
+                    ai siti responsive.</p>
             </div>
-        
+
             <div class="progetti-in-evidenza">
                 <h3 class="section-subtitle" data-i18n="projects.featured.title">Progetti in Evidenza</h3>
                 <!-- Le immagini dei progetti devono essere 800x400 -->
@@ -29,37 +33,34 @@
                 <article class="progetto-grande box-styled box-styled-bordered">
                     <div class="progetto-image">
                         <div class="status-badge in-progress">
-                            <i class="fas fa-code-branch"></i> <span data-i18n="projects.status.inProgress">In Sviluppo</span>
+                            <i class="fas fa-code-branch"></i> <span data-i18n="projects.status.inProgress">In
+                                Sviluppo</span>
                         </div>
-                        <img src="../images/project-images/clock.jpg" 
-                             alt="Clock"
-                             width="800"
-                             height="400">
+                        <img src="../images/project-images/api_login.jpg" alt="Clock" width="800" height="400">
                     </div>
                     <div class="progetto-content">
-                        <h3 data-i18n="projects.featured.clock.title">Orologio</h3>
-                        <p data-i18n="projects.featured.clock.description">Sviluppo di un orologio digitale che mostra l'ora e la data. Presto sarà implementato il supporto per fusi orari e una funzionalità di cronometro/timer.</p>
+                        <h3 data-i18n="projects.featured.AuthAPI.title">Auth API</h3>
+                        <p data-i18n="projects.featured.AuthAPI.description">Servizio di autenticazione e gestione utenti modulare e riutilizzabile. Gestione dell'autenticazione, registrazione utenti, facilmente integrabile in altri progetti.</p>
                         <div class="tech-stack">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
+                            <span>Java</span>
+                            <span>Spring Boot</span>
                         </div>
-                        <a href="https://thegvr3.github.io/Clock/" class="project-link">
-                            <span data-i18n="projects.buttons.viewProject">Vedi Progetto</span> <i class="fas fa-arrow-right"></i>
+                        <a href="https://github.com/TheGvR3/Auth-Service-API" class="project-link">
+                            <span data-i18n="projects.buttons.viewProject">Vedi Progetto</span> <i
+                                class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </article>
-        
+
                 <!-- Progetto in Evidenza 2 -->
                 <article class="progetto-grande box-styled box-styled-bordered">
                     <div class="progetto-image">
                         <div class="status-badge in-progress">
-                            <i class="fas fa-code-branch"></i> <span data-i18n="projects.status.inProgress">In Sviluppo</span>
+                            <i class="fas fa-code-branch"></i> <span data-i18n="projects.status.inProgress">In
+                                Sviluppo</span>
                         </div>
-                        <img src="../images/project-images/selezioneNazionalePiloti.png" 
-                             alt="Selezione Nazionale Piloti Website"
-                             width="800"
-                             height="400">
+                        <img src="../images/project-images/selezioneNazionalePiloti.png"
+                            alt="Selezione Nazionale Piloti Website" width="800" height="400">
                     </div>
                     <div class="progetto-content">
                         <h3 data-i18n="projects.featured.snp.title">Selezione Nazionale Piloti Website</h3>
@@ -70,110 +71,118 @@
                             <span>JavaScript</span>
                         </div>
                         <a href="https://thegvr3.github.io/SNP/index.html" class="project-link">
-                            <span data-i18n="projects.buttons.viewProject">Vedi Progetto</span> <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="projects.buttons.viewProject">Vedi Progetto</span> <i
+                                class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </article>
             </div>
-        
+
             <div class="progetti-grid">
                 <!-- Progetto 1 -->
-                 <!-- Le immagini dei progetti devono essere 400x200 -->
+                <!-- Le immagini dei progetti devono essere 400x200 -->
                 <article class="progetto box-styled box-styled-bordered">
                     <div class="progetto-image">
                         <div class="status-badge completed">
-                            <i class="fas fa-check-circle"></i> <span data-i18n="projects.status.completed">Completato</span>
+                            <i class="fas fa-check-circle"></i> <span
+                                data-i18n="projects.status.completed">Completato</span>
                         </div>
-                        <img src="../images/project-images/batteryReader.jpg" 
-                             alt="Battery level reader"
-                             width="400"
-                             height="200">
+                        <img src="../images/project-images/batteryReader.jpg" alt="Battery level reader" width="400"
+                            height="200">
                     </div>
                     <div class="progetto-content">
                         <h3 data-i18n="projects.featured.battery.title">Battery Reader</h3>
-                        <p data-i18n="projects.featured.battery.description">App Android che permette di monitorare la carica della batteria e di vedere se il dispositivo è in carica. Fornisce informazioni utili per ottimizzare l'uso della batteria.</p>
+                        <p data-i18n="projects.featured.battery.description">App Android che permette di monitorare la
+                            carica della batteria e di vedere se il dispositivo è in carica. Fornisce informazioni utili
+                            per ottimizzare l'uso della batteria.</p>
                         <div class="tech-stack">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
                         <a href="https://thegvr3.github.io/Battery_Reader/" class="project-link">
-                            <span data-i18n="projects.buttons.viewProject">Vedi Progetto</span> <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="projects.buttons.viewProject">Vedi Progetto</span> <i
+                                class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </article>
 
                 <!-- Progetto 2 -->
+                <article class="progetto box-styled box-styled-bordered">
+                    <div class="progetto-image">
+                        <div class="status-badge in-progress">
+                            <i class="fas fa-code-branch"></i> <span data-i18n="projects.status.inProgress">In
+                                Sviluppo</span>
+                        </div>
+                        <img src="../images/project-images/clock.jpg" alt="Clock" width="800" height="400">
+                    </div>
+                    <div class="progetto-content">
+                        <h3 data-i18n="projects.featured.clock.title">Orologio</h3>
+                        <p data-i18n="projects.featured.clock.description">Sviluppo di un orologio digitale che mostra
+                            l'ora e la data. Presto sarà implementato il supporto per fusi orari e una funzionalità di
+                            cronometro/timer.</p>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="https://thegvr3.github.io/Clock/" class="project-link">
+                            <span data-i18n="projects.buttons.viewProject">Vedi Progetto</span> <i
+                                class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Progetto 3 -->
                 <article class="progetto box-styled box-styled-hover">
                     <div class="progetto-image">
                         <div class="status-badge completed">
-                            <i class="fas fa-check-circle"></i> <span data-i18n="projects.status.completed">Completato</span>
+                            <i class="fas fa-check-circle"></i> <span
+                                data-i18n="projects.status.completed">Completato</span>
                         </div>
-                        <img src="../images/project-images/qrCodeGen.jpg" 
-                             alt="Qr Code Generator"
-                             width="400"
-                             height="200">
+                        <img src="../images/project-images/qrCodeGen.jpg" alt="Qr Code Generator" width="400"
+                            height="200">
                     </div>
                     <div class="progetto-content">
                         <h3 data-i18n="projects.featured.qr.title">Qr Code Generator</h3>
-                        <p data-i18n="projects.featured.qr.description">Generatore di QR Code che permette di creare codici personalizzati, con la possibilità di scegliere il colore per adattarsi alle proprie esigenze.</p>
+                        <p data-i18n="projects.featured.qr.description">Generatore di QR Code che permette di creare
+                            codici personalizzati, con la possibilità di scegliere il colore per adattarsi alle proprie
+                            esigenze.</p>
                         <div class="tech-stack">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
                         <a href="https://thegvr3.github.io/QR-Generator/" class="project-link">
-                            <span data-i18n="projects.buttons.viewProject">Vedi Progetto</span> <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="projects.buttons.viewProject">Vedi Progetto</span> <i
+                                class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </article>
-        
-                <!-- Progetto 3 -->
+
+                <!-- Progetto 4 -->
                 <article class="progetto box-styled box-styled-hover">
                     <div class="progetto-image">
                         <div class="status-badge completed">
-                            <i class="fas fa-check-circle"></i> <span data-i18n="projects.status.completed">Completato</span>
+                            <i class="fas fa-check-circle"></i> <span
+                                data-i18n="projects.status.completed">Completato</span>
                         </div>
-                        <img src="../images/project-images/pixelArt.jpg" 
-                             alt="Pixel Table Generator"
-                             width="400"
-                             height="200">
+                        <img src="../images/project-images/pixelArt.jpg" alt="Pixel Table Generator" width="400"
+                            height="200">
                     </div>
                     <div class="progetto-content">
                         <h3 data-i18n="projects.featured.pixel.title">Pixel Table Generator</h3>
-                        <p data-i18n="projects.featured.pixel.description">Creazione di una tavoletta per disegnare pixel art. Ottimizzata per l'uso su PC, permette di creare opere pixelate in modo semplice e divertente.</p>
+                        <p data-i18n="projects.featured.pixel.description">Creazione di una tavoletta per disegnare
+                            pixel art. Ottimizzata per l'uso su PC, permette di creare opere pixelate in modo semplice e
+                            divertente.</p>
                         <div class="tech-stack">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
                         <a href="https://thegvr3.github.io/Pixel_Table_Generator/" class="project-link">
-                            <span data-i18n="projects.buttons.viewProject">Vedi Progetto</span> <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </article>
-        
-                <!-- Progetto 4 -->
-                <article class="progetto box-styled box-styled-hover">
-                    <div class="progetto-image">
-                        <div class="status-badge in-progress">
-                            <i class="fas fa-code-branch"></i> <span data-i18n="projects.status.inProgress">In Sviluppo</span>
-                        </div>
-                        <img src="../images/project-images/weatherApp.jpg" 
-                             alt="Weather App"
-                             width="400"
-                             height="200">
-                    </div>
-                    <div class="progetto-content">
-                        <h3 data-i18n="projects.featured.weather.title">Weather App</h3>
-                        <p data-i18n="projects.featured.weather.description">Applicazione meteo in tempo reale, che utilizza un'API esterna per mostrare le previsioni del tempo e aggiornamenti continui. Ancora in sviluppo.</p>
-                        <div class="tech-stack">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a href="https://github.com/TheGvR3/Weather_App" class="project-link">
-                            <span data-i18n="projects.buttons.projectDetails">Dettagli Progetto</span> <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="projects.buttons.viewProject">Vedi Progetto</span> <i
+                                class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </article>
@@ -181,55 +190,84 @@
                 <!-- Progetto 5 -->
                 <article class="progetto box-styled box-styled-hover">
                     <div class="progetto-image">
-                        <div class="status-badge completed">
-                            <i class="fas fa-check-circle"></i> <span data-i18n="projects.status.completed">Completato</span>
+                        <div class="status-badge in-progress">
+                            <i class="fas fa-code-branch"></i> <span data-i18n="projects.status.inProgress">In
+                                Sviluppo</span>
                         </div>
-                        <img src="../images/project-images/rockPaperScissors.jpg" 
-                             alt="Rock Paper Scissor"
-                             width="400"
-                             height="200">
+                        <img src="../images/project-images/weatherApp.jpg" alt="Weather App" width="400" height="200">
+                    </div>
+                    <div class="progetto-content">
+                        <h3 data-i18n="projects.featured.weather.title">Weather App</h3>
+                        <p data-i18n="projects.featured.weather.description">Applicazione meteo in tempo reale, che
+                            utilizza un'API esterna per mostrare le previsioni del tempo e aggiornamenti continui.
+                            Ancora in sviluppo.</p>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="https://github.com/TheGvR3/Weather_App" class="project-link">
+                            <span data-i18n="projects.buttons.projectDetails">Dettagli Progetto</span> <i
+                                class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Progetto 6 -->
+                <article class="progetto box-styled box-styled-hover">
+                    <div class="progetto-image">
+                        <div class="status-badge completed">
+                            <i class="fas fa-check-circle"></i> <span
+                                data-i18n="projects.status.completed">Completato</span>
+                        </div>
+                        <img src="../images/project-images/rockPaperScissors.jpg" alt="Rock Paper Scissor" width="400"
+                            height="200">
                     </div>
                     <div class="progetto-content">
                         <h3 data-i18n="projects.featured.rockPaperScissor.title">Rock Paper Scissor</h3>
-                        <p data-i18n="projects.featured.rockPaperScissor.description">Applicazione meteo in tempo reale, che utilizza un'API esterna per mostrare le previsioni del tempo e aggiornamenti continui. Ancora in sviluppo.</p>
+                        <p data-i18n="projects.featured.rockPaperScissor.description">Applicazione meteo in tempo reale,
+                            che utilizza un'API esterna per mostrare le previsioni del tempo e aggiornamenti continui.
+                            Ancora in sviluppo.</p>
                         <div class="tech-stack">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
                         <a href="https://thegvr3.github.io/Rock_Paper_Scissor/" class="project-link">
-                            <span data-i18n="projects.buttons.projectDetails">Dettagli Progetto</span> <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="projects.buttons.projectDetails">Dettagli Progetto</span> <i
+                                class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </article>
 
-                <!-- Progetto 6 -->
+                <!-- Progetto 7 -->
                 <article class="progetto box-styled box-styled-bordered">
                     <div class="progetto-image">
                         <div class="status-badge in-progress">
-                            <i class="fas fa-code-branch"></i> <span data-i18n="projects.status.inProgress">In Sviluppo</span>
+                            <i class="fas fa-code-branch"></i> <span data-i18n="projects.status.inProgress">In
+                                Sviluppo</span>
                         </div>
-                        <img src="../images/project-images/panari.jpg" 
-                             alt="Panari Salentini Website"
-                             width="800"
-                             height="400">
+                        <img src="../images/project-images/panari.jpg" alt="Panari Salentini Website" width="800"
+                            height="400">
                     </div>
                     <div class="progetto-content">
                         <h3 data-i18n="projects.featured.panari.title">Panari Salentini Website</h3>
-                        <p data-i18n="projects.featured.panari.description">Sito Web per la valorizzazione dei Panari Salentini.</p>
+                        <p data-i18n="projects.featured.panari.description">Sito Web per la valorizzazione dei Panari
+                            Salentini.</p>
                         <div class="tech-stack">
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
                         </div>
                         <a href="https://thegvr3.github.io/Panari_Salentini/" class="project-link">
-                            <span data-i18n="projects.buttons.viewProject">Vedi Progetto</span> <i class="fas fa-arrow-right"></i>
+                            <span data-i18n="projects.buttons.viewProject">Vedi Progetto</span> <i
+                                class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </article>
             </div>
         </section>
-        
+
     </main>
 
     <footer>
@@ -244,4 +282,5 @@
     <script src="../js/componentsLoader.js"></script>
     <script src="../js/script.js"></script>
 </body>
+
 </html>

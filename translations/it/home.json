@@ -9,17 +9,17 @@
       "learnMore": "Scopri di più"
     },
     "carousel": {
-      "clock": {
-        "title": "Clock",
-        "description": "Orologio digitale che mostra l'ora e la data."
-      },
-      "battery": {
-        "title": "Battery Reader",
-        "description": "App Android che permette di monitorare la carica della batteria."
+      "AuthAPI":{
+        "title": "Auth API",
+        "description": "Servizio di autenticazione e gestione utenti modulare e riutilizzabile. Gestione dell'autenticazione, registrazione utenti, facilmente integrabile in altri progetti."
       },
       "qr": {
         "title": "QR Code Generator",
         "description": "Generatore di QR Code che permette di creare codici personalizzati"
+      },
+      "snp":{
+        "title": "Selezione Nazionale Piloti Website",
+        "description": "Sito per la Selezione Nazionale Piloti."
       }
     },
     "testimonials": {

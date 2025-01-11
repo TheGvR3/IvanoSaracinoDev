@@ -9,17 +9,17 @@
       "learnMore": "Learn More"
     },
     "carousel": {
-      "clock": {
-        "title": "Clock",
-        "description": "Digital clock showing time and date."
-      },
-      "battery": {
-        "title": "Battery Reader",
-        "description": "Android app that monitors battery charge."
+      "AuthAPI":{
+        "title": "Auth API",
+        "description": "User management and authentication service."
       },
       "qr": {
         "title": "QR Code Generator",
         "description": "QR Code generator that allows you to create custom codes"
+      },
+      "snp":{
+        "title": "Selezione Nazionale Piloti Website",
+        "description": "Website for Selezione Nazionale Piloti."
       }
     },
     "testimonials": {
