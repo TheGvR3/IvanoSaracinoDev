@@ -11,7 +11,7 @@
     "carousel": {
       "nodeAPI":{
         "title": "Node + Express Auth API",
-        "description": "Servizio di autenticazione e gestione utenti modulare e riutilizzabile. Gestione dell'autenticazione, registrazione utenti, con token JWT."
+        "description": "Api per la gestione dell'autenticazione con token JWT."
       },
       "qr": {
         "title": "QR Code Generator",
