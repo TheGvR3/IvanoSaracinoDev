@@ -190,6 +190,11 @@
     border: 1px solid #f1c40f;
 }
 
+.status-badge.suspended {
+    color: #f10f0f;
+    border: 1px solid #f10f0f;
+}
+
 /* Link al progetto */
 .project-link {
     display: inline-flex;

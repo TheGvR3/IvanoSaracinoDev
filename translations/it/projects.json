@@ -51,6 +51,10 @@
       "convertitoreBinario": {
         "title": "Convertitore Binario-Decimale",
         "description": "Un'applicazione web per la conversione di numeri binari in numeri decimali, realizzata con Java."
+      },
+      "dokkanHA": {
+        "title": "Dokkan Battle Hidden Abilities",
+        "description": "Sito Web dedicato alle build delle HA di Dokkan Battle."
       }
     },
     "status": {

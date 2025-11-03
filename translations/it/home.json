@@ -17,9 +17,9 @@
         "title": "QR Code Generator",
         "description": "Generatore di QR Code che permette di creare codici personalizzati"
       },
-      "snp":{
-        "title": "Selezione Nazionale Piloti Website",
-        "description": "Sito per la Selezione Nazionale Piloti."
+      "dokkanHA":{
+        "title": "Dokkan Battle Hidden Abilities",
+        "description": "Sito Web dedicato alle build delle HA di Dokkan Battle."
       }
     },
     "testimonials": {
