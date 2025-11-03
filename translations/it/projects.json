@@ -39,6 +39,18 @@
       "AuthAPI":{
         "title": "Auth API",
         "description": "Servizio di autenticazione e gestione utenti modulare e riutilizzabile."
+      },
+      "nodeAPI": {
+        "title": "Node + Express Auth API",
+        "description": "Servizio di autenticazione e gestione utenti modulare e riutilizzabile. Gestione dell'autenticazione, registrazione utenti, con token JWT."
+      },
+      "toDoApp": {
+        "title": "To Do App",
+        "description": "Un'applicazione web per la gestione delle attività, realizzata con HTML, CSS e JavaScript."
+      },
+      "convertitoreBinario": {
+        "title": "Convertitore Binario-Decimale",
+        "description": "Un'applicazione web per la conversione di numeri binari in numeri decimali, realizzata con Java."
       }
     },
     "status": {

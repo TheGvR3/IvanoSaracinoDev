@@ -9,9 +9,9 @@
       "learnMore": "Learn More"
     },
     "carousel": {
-      "AuthAPI":{
-        "title": "Auth API",
-        "description": "User management and authentication service."
+      "nodeAPI":{
+        "title": "Node + Express Auth API",
+        "description": "Modular and reusable user management and authentication service. Authentication management, user registration, with JWT tokens."
       },
       "qr": {
         "title": "QR Code Generator",
