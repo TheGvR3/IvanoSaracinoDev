@@ -10,8 +10,8 @@
     },
     "carousel": {
       "nodeAPI":{
-        "title": "Node + Express Auth API",
-        "description": "Api per la gestione dell'autenticazione con token JWT."
+        "title": "Auth API(Node-Express) & WebApp(React)",
+        "description": "API di autenticazione Node.js e Express, insieme a un'applicazione web React."
       },
       "qr": {
         "title": "QR Code Generator",

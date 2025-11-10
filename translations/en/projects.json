@@ -41,8 +41,8 @@
         "description": "Modular and reusable user management and authentication service. Authentication management, user registration, easily integrated into other projects."
       },
       "nodeAPI": {
-        "title": "Node + Express Auth API",
-        "description": "Modular and reusable user management and authentication service. Authentication management, user registration, with JWT tokens."
+        "title": "Auth API(Node-Express) & WebApp(React)",
+        "description": "A complete authentication system using Node.js and Express, along with a React + Tailwind CSS web application for consumption."
       },
       "toDoApp": {
         "title": "To Do App",
